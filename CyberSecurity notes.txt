@@ -1,0 +1,36 @@
+[ Riesgos ]
+
+Es la probabilidad de que acurra algo
+Amenazas . Vulnerabilidades . Activos . Impacto
+Formula de riesgos= R = A * V * I
+amenaza + vulnerabilidad = riesgo
+
+amenaza * vulnerabilidad = probabilidad
+
+riesgo inherente - sin controles de seguridad 
+riesgo residual - permanecer después de aplicar controles
+
+tolerancia a errores 
+bajo - medio - alto
+
+método de análisis de  riesgos en 6 fases
+Definir alcance - identificar activos - identificar amenazas - identificar vulnerabilidades - analizar riegos - gestionar riegos 
+Técnicas de análisis 
+	cualitativos
+	cuantitativos 
+
+Vulnerabilidad es un punto débil en el sistema
+
+Ética profesional y legalidad 
+	* Tipo de hackers 
+		white hat 
+		black hat
+		grey hat
+
+Herramientas de seguridad 
+	Nmap - escaneo de puertos 
+	Burn suite - testing de aplicaciones web
+	Metasploit - framework de expoits
+	Wireshark - análisis de trafico 
+
+<------------ [ Tarea ] - { Segmentación de red } -------------->
