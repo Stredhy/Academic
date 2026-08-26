@@ -34,3 +34,16 @@ Herramientas de seguridad
 	Wireshark - análisis de trafico 
 
 <------------ [ Tarea ] - { Segmentación de red } -------------->
+
+[ Amenazas tecnológicas en ciberseguridad ]
+
+Nota = Karspersky
+
+Malware - definición de Malicius + Software
+	Virus -	es un código malicioso que se adjunta a programas 		legítimos y se activa al ejecutarlo
+	Gusanos - programas auto replicantes que se propagan 			automáticamente por redes
+	Troyanos - software aparentemente legitimo que oculta código 		malicioso
+	Ransomware - malware que cifra archivos y exige rescate para 		restaurar el acceso
+	Spyware - software que recopila información sin 			consentimiento de al usuario
+	Adware - software publicitario no dedeado que muestra 			anuncios intrusivos
+	
