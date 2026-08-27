@@ -1,0 +1,8 @@
+[ Tipos de datos, pruebas de hipótesis y pruebas estadísticas ]
+
+< Tipos de datos >
+	cate {Nominal -> Ordina -> }
+	continuos {Iterval -> Rartio}
+
+Mode - Median/Mode - Mean/Median/Mode
+
