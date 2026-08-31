@@ -46,4 +46,23 @@ Malware - definición de Malicius + Software
 	Ransomware - malware que cifra archivos y exige rescate para 		restaurar el acceso
 	Spyware - software que recopila información sin 			consentimiento de al usuario
 	Adware - software publicitario no dedeado que muestra 			anuncios intrusivos
+	Rootkit - Oculta presencia de malware profundamente en el 		sisatema operativo, incluso antes del arranque 			(bootkits)
+	Keyloger - registra cada pulsación de teclado para capturar 		las entradas de texto que el usuario ingresa
+	Fileless Attack Process - No escribe archivos de disco , 		reside en memoria ram y explota cosas del sistema
+	Rogue software - programas falsos de seguridad
+	Hijackers - Secuestran configuraciones del navegador
+	Backdors - Puertas traseras permite el acceso remoto 			persistente evitando autenticaciones 
+	Botnets - 
+
+	Cryiptojacking - Uso no autorizado de recursos de 			dispositivos para minar criptomonedas
+	Zero-Day Exploits - Explotación de vulnerabilidades 			desconocidas por el fabricante, sin parche 			disponible.
+	Ataques DDpoS - ataque de negación de servicios, 
+	Ataque DoS - Lo mismo pero a un solo dispositivo
+	Man-in-the-middel - Interceptación de comunicaciones entre 		dos partes sin que ninguno sea autorizado
+	Atacue ARP Spoofing - Envenenamiento de tablas ARP para 		asociar dirección MAC del atacante con IP de otra 		victima
+	Ataque DNS Spoofing - Falsificación de respuestas DNS para 		redirigir el trafico a sitios maliciosos 
+	Técnicas de explotación de red - Captura y análisis de 			paquetes de red para obtener información sensible
+	Técnicas de explotación de red - Intento sistemático de 		múltiples combinaciones de credenciales hasta 			encontrar las correctas
+	Técnicas de exploración de red - Identificación de puertos
+	Cross-Site Scripting (XSS) - Inyección de scripts en paginas 		web 
 	
