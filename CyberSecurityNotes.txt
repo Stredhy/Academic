@@ -65,4 +65,30 @@ Malware - definición de Malicius + Software
 	Técnicas de explotación de red - Intento sistemático de 		múltiples combinaciones de credenciales hasta 			encontrar las correctas
 	Técnicas de exploración de red - Identificación de puertos
 	Cross-Site Scripting (XSS) - Inyección de scripts en paginas 		web 
+	Ingeniería social - manipulación psicológica para obtener 		datos de la victima
+	Phishing - Correos electrónicos fraudulentos que suplantan 		entidades legitimas para robar información
+	# <------- True Caller ------->
 	
+	
+[ Amenazas internas ]
+
+< Abuso de privilegios >
+Uso excesivo o inadecuado de permisos de acceso designados
+
+< Empleados descontentos >
+Despido, conflicto laboral, insatisfacción salarial, venganza
+
+[ Vulnerabilidad de infraestructura ]
+
+* Fallas de hardware
+* Falta de mantenimiento
+* Sobrecalentamiento
+* Interrupciones eléctricas 
+* Obsolescencia tecnológicas
+* Daños físicos a DC
+
+[ Amenazas a dispositivos ]
+
+	Dispositivos manipulados - Skimmer se refiere a comúnmente a 		diseñados para obtener información o contraseñas y 		robar datos bancarios
+	
+Seguridad de endpoint - Cifrado de disco (Bitloker/FileVault)
