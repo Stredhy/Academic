@@ -1,17 +1,24 @@
+Finalizado [ ✅ ]
+Pendiente [ ❗ ]
+No realizado [ ❌ ]   
+______________________
+
 Seguridad de la Información e Infraestructura Tecnológica 
 [  ] - 
 
 Algoritmos Metaheurísticos 
-[  ] - 
+[ ✅ ] - Optimización
 
 Métodos Numéricos
-[  ] -  
+[  ] - 
 
 Minería de Datos
-[  ] - 
+[ ❗ ] - Tarea 1 - Manejo de pandas
+[ ❗ ] - Tarea 2 - Figuras
+[ ❗ ] - Opcional -> Hacer la actividad que se hizo en el salon
 
 Internet de las Cosas
-[  ] - 
+[ ❗ ] - Actividad 2
 
 Calidad de Software
-[  ] - 
+[ ❗ ] - P01 - Reporte de calidad de SW
