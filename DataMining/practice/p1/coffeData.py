@@ -3,5 +3,5 @@ import numpy as np
 
 coffeData = pd.read_csv("df_arabica_clean.csv")
 
-print(coffeData.head())
+
 

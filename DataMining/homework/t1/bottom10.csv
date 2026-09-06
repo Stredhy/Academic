@@ -1,0 +1,11 @@
+school,sex,age,address,famsize,Pstatus,Medu,Fedu,Mjob,Fjob,reason,guardian,traveltime,studytime,failures,schoolsup,famsup,paid,activities,nursery,higher,internet,romantic,famrel,freetime,goout,Dalc,Walc,health,absences,G1,G2,G3,student_id,avg_grade,high_alcohol,alcohol_category,grupo
+GP,M,18.0,U,LE3,T,1.0,1.0,other,other,course,mother,1.0,1.0,3.0,no,no,no,no,yes,no,yes,yes,2.0,3.0,5.0,2.0,5.0,4.0,0.0,6.0,5.0,0.0,150,3.6666666666666665,True,High,bottom
+GP,M,17.0,R,GT3,T,3.0,4.0,at_home,other,course,mother,3.0,2.0,0.0,no,no,no,no,yes,yes,no,no,5.0,4.0,5.0,2.0,4.0,5.0,0.0,10.0,0.0,0.0,136,3.3333333333333335,True,High,bottom
+GP,M,17.0,R,GT3,T,3.0,4.0,at_home,teacher,course,mother,4.0,2.0,0.0,no,yes,no,no,yes,yes,no,yes,5.0,3.0,3.0,1.0,1.0,5.0,0.0,9.0,0.0,0.0,134,3.0,False,Low,bottom
+GP,F,15.0,U,GT3,T,1.0,1.0,at_home,other,course,mother,3.0,1.0,0.0,no,yes,no,yes,no,yes,yes,yes,,3.0,3.0,1.0,2.0,4.0,0.0,8.0,0.0,0.0,131,2.6666666666666665,False,Low,bottom
+GP,F,18.0,U,GT3,T,,1.0,other,other,course,other,2.0,3.0,0.0,no,yes,yes,no,no,yes,yes,yes,4.0,4.0,4.0,1.0,1.0,3.0,,7.0,0.0,0.0,244,2.3333333333333335,False,Low,bottom
+GP,M,16.0,U,LE3,T,1.0,2.0,other,other,course,mother,2.0,1.0,1.0,no,no,no,yes,yes,yes,no,no,4.0,,4.0,1.0,4.0,5.0,0.0,7.0,0.0,0.0,162,2.3333333333333335,False,Moderate,bottom
+GP,F,18.0,U,GT3,T,3.0,3.0,services,services,home,mother,1.0,2.0,0.0,no,no,no,yes,yes,yes,yes,no,5.0,3.0,4.0,1.0,1.0,4.0,0.0,7.0,0.0,0.0,332,2.3333333333333335,False,Low,bottom
+GP,M,19.0,U,GT3,T,3.0,2.0,services,at_home,home,mother,1.0,1.0,3.0,no,yes,no,no,yes,no,yes,yes,4.0,5.0,4.0,1.0,1.0,4.0,0.0,5.0,0.0,0.0,153,1.6666666666666667,False,Low,bottom
+GP,M,17.0,U,GT3,T,2.0,1.0,other,other,home,mother,1.0,1.0,3.0,no,yes,no,no,yes,yes,yes,no,5.0,4.0,5.0,1.0,2.0,5.0,0.0,5.0,0.0,0.0,144,1.6666666666666667,False,Low,bottom
+GP,F,16.0,U,GT3,A,3.0,3.0,other,other,course,other,2.0,1.0,2.0,no,yes,no,yes,no,yes,yes,yes,4.0,3.0,2.0,1.0,1.0,5.0,,4.0,0.0,0.0,137,1.3333333333333333,False,Low,bottom
