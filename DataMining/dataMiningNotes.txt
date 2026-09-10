@@ -6,4 +6,14 @@
 
 Mode - Median/Mode - Mean/Median/Mode
 
-Me perdí desde hace pinche rato
+Me perdí desde hace pinche rato----------------------------------
+_________________________________________________________________
+
+[ Regresión logística ]
+
+- Varias variables continuas para plantear salida binaria
+- Por cada variable continua, sacar β y valor p
+- Dibujar grafica logística 
+
+DataSet > Hotel Booking Cancelation > Cancelar/No cancelar > 
+	Este cliente te va a dejar plantado?

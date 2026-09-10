@@ -92,3 +92,22 @@ Despido, conflicto laboral, insatisfacción salarial, venganza
 	Dispositivos manipulados - Skimmer se refiere a comúnmente a 		diseñados para obtener información o contraseñas y 		robar datos bancarios
 	
 Seguridad de endpoint - Cifrado de disco (Bitloker/FileVault)
+
+[ Seguridad en IoT ]
+
+	Problemas - contraseñas por defecto, firmware sin			actualizar, falta de cifrado, servicios innecesarios 		expuestos, vulnerabilidades
+	Firmware - desactualizados, dispositivos sin actualizaciones 		de seguridad, vulnerabilidades conocidas sin parche
+	
+	----------------------------
+	<<Riesgos a la continuidad operativa>>
+	* Caída de sistema críticos
+	* Respaldos no probados
+	* Dependencia de proveedores único
+	* Falta de respaldo
+	* Planes inexistentes
+	
+	<<Amenazas emergentes>>
+	* Ataque de inteligencia artificial
+	* Ataque de cadena de suministros
+	* Deepfakes - clonación de voz, video en tiempo real, 			imágenes sintéticas
+	* Malware polimórfico y cryptojacking
