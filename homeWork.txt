@@ -10,15 +10,13 @@ Algoritmos Metaheurísticos
 [  ] - 
 
 Métodos Numéricos
-[ ❗ ] - Resolución de ejercicios Bisección y regla falsa
+[  ] - 
 
 Minería de Datos
-[ ✅ ] - Tarea 1 - Manejo de pandas
 [ ❗ ] - Tarea 2 - Figuras
-[ ❗ ] - Opcional -> Hacer la actividad que se hizo en el salón
 
 Internet de las Cosas
-[ ✅ ] - Actividad 2
+[  ] - 
 
 Calidad de Software
-[ ✅ ] - P01 - Reporte de calidad de SW
+[  ] - 
