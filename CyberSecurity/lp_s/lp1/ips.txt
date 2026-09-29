@@ -1,0 +1,19 @@
+carpeta remota -> 151.245.112.146 - sin acceso con credenciales default
+
+carpeta remota -> 217.77.0.49
+
+escritorio remoto -> 213.108.4.53 - sin acceso con credenciales por defecto
+
+escritorio remoto -> 13.80.6.247
+
+escritorio remoto -> 203.231.100.208
+
+
+imagen de Advance porte manager
+
+Ips de cámaras y routers
+
+45.223.160.105
+216.36.242.185
+74.207.241.245
+104.17.32.70

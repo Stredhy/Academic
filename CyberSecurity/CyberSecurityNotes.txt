@@ -111,3 +111,19 @@ Seguridad de endpoint - Cifrado de disco (Bitloker/FileVault)
 	* Ataque de cadena de suministros
 	* Deepfakes - clonación de voz, video en tiempo real, 			imágenes sintéticas
 	* Malware polimórfico y cryptojacking
+
+&* comando --->  ( netstat -a ) -> escanea dispositivos conectados o enlazados 
+
+[ Modelo OSI ]
+
+Tiene siete capas
+	Divide y vencerás: Cada capa ejecuta una sola tarea y ofrece 		su servicio a la capa de arriba
+	Independencia: puedes cambiar las capas sin entrar al 	navegador
+< Capas >
+	* Aplicación
+	* Presentación: formato, cifrado, compresión
+	* Sesión: abrir y cerrar diálogos, sincronización, control 		de turnos
+	* Transporte: segmentación, puertos, fiabilidad
+	* Red: direccionamiento, enrutamiento, unidad de datos
+	* Enlace de datos: dirección MAC, el switch trabaja aquí, 		tramas(empaquetados)
+	* Física: señales puras, medios y conectores, sin 			inteligencia

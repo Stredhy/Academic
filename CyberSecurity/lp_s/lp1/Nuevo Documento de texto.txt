@@ -1,0 +1,144 @@
+Práctica: Reconocimiento de dispositivos con Shodan
+1. Introducción
+
+En esta práctica se utilizó la herramienta Shodan para realizar un reconocimiento de diferentes dispositivos y servicios que se encuentran expuestos en Internet.
+
+Shodan es un buscador que permite encontrar dispositivos conectados a Internet, como servidores, routers, cámaras de seguridad y equipos que tienen diferentes servicios habilitados. La herramienta muestra información	 que puede estar disponible públicamente sobre estos dispositivos.
+
+El propósito de la práctica fue identificar algunos dispositivos mediante sus direcciones IP, observar qué tipo de servicio tenían disponible y analizar los posibles riesgos de seguridad que puede representar tener estos servicios expuestos.
+
+2. Objetivo
+Objetivo general
+
+Utilizar Shodan para identificar dispositivos y servicios expuestos a Internet y analizar los posibles riesgos de seguridad relacionados con ellos.
+
+Objetivos específicos
+Conocer el funcionamiento básico de Shodan.
+Identificar diferentes tipos de dispositivos mediante sus direcciones IP.
+Observar servicios como escritorio remoto y carpetas remotas.
+Identificar cámaras de seguridad y routers.
+Comprobar si algunos servicios permitían el acceso utilizando credenciales predeterminadas.
+Analizar los riesgos que puede tener dejar estos servicios expuestos.
+3. Material utilizado
+Computadora.
+Conexión a Internet.
+Navegador web.
+Plataforma Shodan.
+Direcciones IP proporcionadas para la práctica.
+4. Desarrollo de la práctica
+
+Primero se ingresó a la plataforma Shodan y se realizaron búsquedas utilizando las direcciones IP proporcionadas.
+
+A partir de los resultados fue posible identificar diferentes tipos de servicios y dispositivos. Entre ellos se encontraron servicios relacionados con escritorio remoto, carpetas remotas, cámaras de seguridad y routers.
+
+En los dispositivos de escritorio remoto y carpetas remotas se realizó una comprobación utilizando las credenciales predeterminadas. En ninguno de los casos se obtuvo acceso mediante estas credenciales.
+
+Los resultados obtenidos fueron los siguientes.
+
+4.1 Escritorio remoto
+
+Se identificaron tres direcciones IP relacionadas con servicios de escritorio remoto:
+
+Dirección IP	Servicio	Resultado
+213.108.4.53	Escritorio remoto	No se obtuvo acceso con credenciales predeterminadas
+13.80.6.247	Escritorio remoto	No se obtuvo acceso con credenciales predeterminadas
+203.231.100.208	Escritorio remoto	No se obtuvo acceso con credenciales predeterminadas
+
+El escritorio remoto permite conectarse a un equipo desde otra ubicación. El problema de seguridad aparece cuando este tipo de servicio está expuesto directamente a Internet, ya que puede recibir intentos de conexión de personas externas.
+
+En los tres casos analizados no fue posible ingresar utilizando las credenciales predeterminadas.
+
+4.2 Carpetas remotas
+
+También se encontraron dos dispositivos que tenían servicios relacionados con carpetas remotas.
+
+Dirección IP	Servicio	Resultado
+217.77.0.49	Carpeta remota	No se obtuvo acceso con credenciales predeterminadas
+151.245.112.146	Carpeta remota	No se obtuvo acceso con credenciales predeterminadas
+
+Una carpeta compartida remotamente puede ser útil para permitir que diferentes equipos accedan a archivos, pero si se configura incorrectamente puede provocar que información privada quede expuesta.
+
+En estos dos casos no se logró acceder utilizando las credenciales predeterminadas.
+
+4.3 Cámaras de seguridad y routers
+
+Durante la práctica también se identificaron direcciones IP correspondientes a cámaras de seguridad y dispositivos de red.
+
+Dirección IP	Dispositivo identificado
+45.223.160.105	Cámara de seguridad
+216.36.242.185	Cámara de seguridad
+74.207.241.245	Router
+104.17.32.70	Router
+
+Las cámaras de seguridad son dispositivos que pueden contener información sensible, principalmente cuando transmiten imágenes o video. Si una cámara se encuentra expuesta a Internet y tiene una configuración de seguridad deficiente, existe el riesgo de que una persona no autorizada pueda intentar acceder a ella.
+
+En el caso de los routers, tener servicios de administración expuestos también puede representar un riesgo, ya que pueden revelar información sobre el dispositivo o permitir intentos de acceso.
+
+5. Resultados generales
+
+Después de realizar las búsquedas se obtuvieron los siguientes resultados:
+
+No.	Dirección IP	Tipo de dispositivo/servicio	Resultado
+1	213.108.4.53	Escritorio remoto	Sin acceso con credenciales predeterminadas
+2	13.80.6.247	Escritorio remoto	Sin acceso con credenciales predeterminadas
+3	217.77.0.49	Carpeta remota	Sin acceso con credenciales predeterminadas
+4	151.245.112.146	Carpeta remota	Sin acceso con credenciales predeterminadas
+5	203.231.100.208	Escritorio remoto	Sin acceso con credenciales predeterminadas
+6	45.223.160.105	Cámara de seguridad	Identificada mediante Shodan
+7	216.36.242.185	Cámara de seguridad	Identificada mediante Shodan
+8	74.207.241.245	Router	Identificado mediante Shodan
+9	104.17.32.70	Router	Identificado mediante Shodan
+
+Un punto importante observado durante la práctica fue que encontrar un dispositivo en Shodan no significa necesariamente que se pueda acceder a él. Shodan permite observar información de servicios que están expuestos públicamente, pero esto no significa que el dispositivo esté comprometido.
+
+6. Riesgos de seguridad
+
+A partir de lo observado durante la práctica, algunos de los principales riesgos que pueden presentarse son:
+
+Escritorio remoto:
+
+Intentos de acceso no autorizado.
+Ataques de fuerza bruta.
+Explotación de vulnerabilidades del servicio.
+Uso de contraseñas débiles.
+
+Carpetas remotas:
+
+Exposición de archivos.
+Acceso no autorizado a información.
+Modificación o eliminación de archivos.
+
+Cámaras de seguridad:
+
+Acceso no autorizado a imágenes o video.
+Problemas de privacidad.
+Exposición de información sobre el lugar donde está instalada la cámara.
+
+Routers:
+
+Intentos de acceder al panel de administración.
+Identificación del fabricante o modelo.
+Explotación de vulnerabilidades si el firmware está desactualizado.
+7. Medidas de seguridad
+
+Para evitar este tipo de problemas se pueden aplicar diferentes medidas de seguridad, por ejemplo:
+
+Cambiar las contraseñas predeterminadas.
+Utilizar contraseñas seguras y diferentes para cada dispositivo.
+Mantener actualizado el firmware de routers y cámaras.
+Desactivar servicios que no sean necesarios.
+Utilizar un firewall.
+Evitar exponer directamente los servicios de administración a Internet.
+Utilizar una VPN para conexiones remotas cuando sea posible.
+Revisar periódicamente los dispositivos que están expuestos a Internet.
+8. Conclusión
+
+Con esta práctica pude conocer de una forma más práctica el funcionamiento de Shodan y observar la cantidad de dispositivos y servicios que pueden encontrarse expuestos en Internet.
+
+Se analizaron nueve direcciones IP, entre las cuales había servicios de escritorio remoto, carpetas remotas, cámaras de seguridad y routers. En los cinco casos donde se comprobaron credenciales predeterminadas, no se obtuvo acceso.
+
+También pude observar que el hecho de que un dispositivo aparezca en Shodan no significa automáticamente que sea vulnerable o que se pueda acceder a él. Sin embargo, tener un servicio expuesto a Internet aumenta la posibilidad de que personas externas intenten identificarlo o atacarlo.
+
+Por esta razón es importante cambiar las credenciales predeterminadas, mantener los dispositivos actualizados y limitar los servicios que se encuentran disponibles desde Internet.
+
+En general, la práctica permitió comprender mejor el concepto de superficie de ataque y la importancia de revisar qué servicios de nuestros dispositivos están expuestos públicamente.
