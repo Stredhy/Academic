@@ -1,0 +1,11 @@
+<----------Routmap---------->
+En este diagrama de Gantt se muestra la planificación de las actividades de NutriMaker. Incluye tareas relacionadas con la documentación, la migración de la conexión a la base de datos MySQL, la adaptación de consultas y la elaboración de pruebas. Aquí podemos ver cuál es la duración y la distribución de las actividades, así como dar seguimiento a la planificación del proyecto.
+
+<----------Burn up---------->
+Con esta observamos la evolución de dos indicadores del proyecto entre septiembre y octubre. La línea verde presenta cambios durante el periodo, mientras que la morada comienza a aumentar hacia finales de septiembre. Esto nos permite visualizar cómo han evolucionado los indicadores a lo largo del tiempo y dar seguimiento a su comportamiento.
+
+<----------Status char---------->
+En esta gráfica podemos observar la distribución de las incidencias y tareas del proyecto según su estado actual. Tenemos 2 incidencias nuevas (new issue), 6 en espera (icebox), 1 en el Product Backlog, 3 en el Sprint Backlog y 8 tareas marcadas como terminadas (done). Esto nos permite identificar qué trabajo sigue pendiente y qué actividades ya se han completado.
+
+<----------Story Points per Sprint---------->
+Esta gráfica muestra cómo se distribuyen las tareas entre los diferentes sprints. También podemos observar que hay una cantidad considerable de elementos sin asignar a un sprint, por lo que esta información nos ayuda a identificar trabajo que necesita organizarse y priorizarse para las siguientes etapas del proyecto, o son issues que tienen un rango de duracion mayor a dos semanas o que incluye subtareas.

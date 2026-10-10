@@ -127,3 +127,8 @@ Tiene siete capas
 	* Red: direccionamiento, enrutamiento, unidad de datos
 	* Enlace de datos: dirección MAC, el switch trabaja aquí, 		tramas(empaquetados)
 	* Física: señales puras, medios y conectores, sin 			inteligencia
+
+[ Practica Kali, metasploit, w2k3 ]
+192.168.147.130 - linux
+ y
+ 192.168.147.131 - windows

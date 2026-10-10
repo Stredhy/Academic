@@ -4,21 +4,19 @@ No realizado [ ❌ ]
 ______________________
 
 Seguridad de la Información e Infraestructura Tecnológica 
-[ ❗ ] - practica: Buscando Dispositivos Vulnerables con Shodan / Buscando Dispositivos en mi Red Publica
-[ ❗ ] - Resumen de Fundamentos de Ciberseguridad
-
+[  ] - Resumen de Fundamentos de Redes y Criptografía Aplicada
 
 Algoritmos Metaheurísticos 
 [  ] - 
 
 Métodos Numéricos
-[ ✅ ] - Método de punto fijo multivariable
+[  ] - 
 
 Minería de Datos
-[ ✅ ] - Tarea 3 - Pruebas estadísticas
+[  ] - 
 
 Internet de las Cosas
-[  ] - 
+[ ❗ ] - Actividad 6
 
 Calidad de Software
 [  ] - 
