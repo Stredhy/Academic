@@ -1,0 +1,2225 @@
+                List<LocalTime> tiempos =
+                        DistribuidorDeCalorias.obtenerHoras(
+
+                            tiempos.get(i).toString();
+
+.build/
+.build-log.txt
+.env
+*.log
+        boolean result = userRepo.verifyPasswordByEmail(
+            emailTextField.getText(),
+            passwordTextField.getText()
+        );
+
+        System.out.println("Correo: " + emailTextField.getText());
+        System.out.println("Contraseña válida: " + result);
+
+        return result;
+    }
+    public void dialog(String warningMessage) throws IOException {
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("DialogInputs.fxml"));
+        Parent parent = loader.load();
+        DialogController dialog = loader.getController();
+        dialog.setText(warningMessage);
+            dialog("No se admite texto vacio");
+            try {
+                patientId = new PatientRepository().createPatientAndGetId(nameTextField.getText(), age, weight, height);
+            } catch (IOException e) {
+                dialog("No se pudo guardar el paciente. Revisa la conexión a MySQL.");
+                return;
+            }
+        ((CreateDietController) loader.getController()).setPatientId(patientId);
+            dialog("No se admite texto vacio");
+    public void dialog(String warningMessage) throws IOException {
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("DialogInputs.fxml"));
+        Parent parent = loader.load();
+        DialogController dialog = loader.getController();
+        dialog.setText(warningMessage);
+        this.rest_day = restDay == null ? null : restDay.toUpperCase(java.util.Locale.ROOT);
+            6, new String[]{
+                    "BREAKFAST",
+                    "SNACK",
+                    "LUNCH",
+                    "LUNCH",
+                    "SNACK",
+                    "DINNER"
+            },
+
+            5, new String[]{
+                    "BREAKFAST",
+                    "SNACK",
+                    "LUNCH",
+                    "SNACK",
+                    "DINNER"
+            },
+
+            4, new String[]{
+                    "BREAKFAST",
+                    "LUNCH",
+                    "LUNCH",
+                    "SNACK"
+            },
+
+            3, new String[]{
+                    "BREAKFAST",
+                    "LUNCH",
+                    "DINNER"
+            },
+
+            2, new String[]{
+                    "BREAKFAST",
+                    "LUNCH"
+            },
+
+            1, new String[]{
+                    "BREAKFAST"
+            }
+    );
+
+    private static final Map<Integer, String[]> tiemposComida = Map.of(
+            6, new String[]{
+                    "DESAYUNO",
+                    "COLACION_MATUTINA",
+                    "ALMUERZO",
+                    "COMIDA",
+                    "COLACION_VESPERTINA",
+                    "CENA"
+            },
+
+            5, new String[]{
+                    "DESAYUNO",
+                    "COLACION_MATUTINA",
+                    "COMIDA",
+                    "COLACION_VESPERTINA",
+                    "CENA"
+            },
+
+            4, new String[]{
+                    "DESAYUNO",
+                    "ALMUERZO",
+                    "COMIDA",
+                    "COLACION_VESPERTINA"
+            },
+
+            3, new String[]{
+                    "DESAYUNO",
+                    "COMIDA",
+                    "CENA"
+            },
+
+            2, new String[]{
+                    "DESAYUNO",
+                    "COMIDA"
+            },
+
+            1, new String[]{
+                    "DESAYUNO"
+            }
+
+            6, new Integer[]{
+                    25, 10, 12, 22, 10, 21
+            },
+
+            5, new Integer[]{
+                    30, 10, 25, 10, 25
+            },
+
+            4, new Integer[]{
+                    25, 25, 30, 20
+            },
+
+            3, new Integer[]{
+                    30, 40, 30
+            },
+
+            2, new Integer[]{
+                    50, 50
+            },
+
+            1, new Integer[]{
+                    100
+            }
+    );
+    public static List<ComidaProgramada> distribuir(
+            double caloriasTotales,
+            int comidasPorDia) {
+        String[] tiempos = tiemposComida.get(comidasPorDia);
+        if (tipos == null || tiempos == null || porcentajes == null) {
+            throw new IllegalArgumentException(
+                    "El número de comidas debe estar entre 1 y 6."
+            );
+        }
+
+            double caloriasAsignadas =
+                    caloriasTotales * porcentajes[i] / 100.0;
+
+            ComidaProgramada comida =
+                    new ComidaProgramada(
+                            tipos[i],
+                            caloriasAsignadas
+                    );
+
+            resultado.add(comida);
+    public static String[] obtenerTiempos(int comidasPorDia) {
+        String[] tiempos = tiemposComida.get(comidasPorDia);
+
+        if (tiempos == null) {
+            throw new IllegalArgumentException(
+                    "El número de comidas debe estar entre 1 y 6."
+            );
+        }
+
+        return tiempos;
+    }
+            throw new IllegalArgumentException(
+                    "El número de comidas por día debe estar entre 1 y 6."
+            );
+        LocalTime inicio = LocalTime.of(8, 0);
+        LocalTime fin = LocalTime.of(20, 0);
+        int minutosTotales =
+                (fin.toSecondOfDay() - inicio.toSecondOfDay()) / 60;
+
+        int intervalo =
+                minutosTotales /
+                        (comidasPorDia - 1 > 0
+                                ? comidasPorDia - 1
+                                : 1);
+            LocalTime horaComida =
+                    inicio.plusMinutes(intervalo * i);
+    @SerializedName("meal_time")
+    private String mealTime;
+    public String getMealTime() {
+        return mealTime;
+    }
+
+    public void setMealTime(String mealTime) {
+        this.mealTime = mealTime;
+    }
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>5.0.0-alpha.14</version>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+import com.google.gson.*;
+import java.sql.*;
+import java.time.*;
+    @FunctionalInterface
+    public interface Work<T> { T run(Connection c) throws SQLException, IOException; }
+    public Connection connect() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/nutrimaker?useSSL=false&serverTimezone=UTC";
+        String user = "root";
+        String password = "";
+        return DriverManager.getConnection(url, user, password);
+    public <T> T read(Work<T> work) throws IOException {
+        try (Connection c = connect()) { return work.run(c); }
+        catch (SQLException e) { throw new IOException("Error de MySQL: " + e.getMessage(), e); }
+    public <T> T transaction(Work<T> work) throws IOException {
+        return read(c -> {
+            c.setAutoCommit(false);
+            try {
+                T result = work.run(c);
+                c.commit();
+                return result;
+            } catch (SQLException | IOException | RuntimeException e) {
+                try { c.rollback(); } catch (SQLException rollback) { e.addSuppressed(rollback); }
+                throw e;
+            }
+        });
+    private static void bind(PreparedStatement s, Object... args) throws SQLException {
+        for (int i = 0; i < args.length; i++) s.setObject(i + 1, args[i]);
+    public static JsonArray query(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql)) {
+            bind(s, args);
+            try (ResultSet rs = s.executeQuery()) {
+                JsonArray rows = new JsonArray();
+                ResultSetMetaData meta = rs.getMetaData();
+                while (rs.next()) {
+                    JsonObject row = new JsonObject();
+                    for (int i = 1; i <= meta.getColumnCount(); i++) {
+                        String key = meta.getColumnLabel(i);
+                        Object v = rs.getObject(i);
+                        if (v == null) row.add(key, JsonNull.INSTANCE);
+                        else if (v instanceof Number n) row.addProperty(key, n);
+                        else if (v instanceof java.sql.Date d) row.addProperty(key, d.toLocalDate().toString());
+                        else if (v instanceof Timestamp t) row.addProperty(key, t.toLocalDateTime().toInstant(ZoneOffset.UTC).toString());
+                        else if (v instanceof LocalDateTime t) row.addProperty(key, t.toInstant(ZoneOffset.UTC).toString());
+                        else row.addProperty(key, v.toString());
+                    }
+                    rows.add(row);
+                }
+                return rows;
+            }
+        }
+    public static int execute(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql)) {
+            bind(s, args);
+            return s.executeUpdate();
+    public static int insert(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+            bind(s, args);
+            s.executeUpdate();
+            try (ResultSet keys = s.getGeneratedKeys()) {
+                if (!keys.next()) throw new SQLException("No se recibiÃ³ el ID del registro creado.");
+                return keys.getInt(1);
+    public static String items(JsonArray rows) {
+        JsonObject result = new JsonObject();
+        result.add("items", rows);
+        return result.toString();
+    }
+    public static String one(JsonArray rows) throws IOException {
+        if (rows.isEmpty()) throw new IOException("No se encontrÃ³ el registro solicitado.");
+        return rows.get(0).toString();
+    }
+                List<LocalTime> tiempos =
+                        DistribuidorDeCalorias.obtenerHoras(
+                            tiempos.get(i).toString();
+    requires mysql.connector.j;
+    private int patientId;
+
+    public void setPatientId(int patientId) { this.patientId = patientId; }
+        return switch (day) {
+            case "Lunes" -> "MONDAY";
+            case "Martes" -> "TUESDAY";
+            case "Miercoles" -> "WEDNESDAY";
+            case "Jueves" -> "THURSDAY";
+            case "Viernes" -> "FRIDAY";
+            case "Sabado" -> "SATURDAY";
+            case "Domingo" -> "SUNDAY";
+            default -> "UNKNOWN";
+        };
+            if (mealRepository.createNewDiet(cantCalories, foodQuantity, getRestDay(), User.getUser().getId(), patientId, note)) {
+            } else {
+                dialog("No se pudo crear la dieta. Revisa la conexión a MySQL y que el catálogo tenga alimentos suficientes.");
+        nextButton.setVisible(offset < (dietRepo.getTotalDietsCount(com.javafx.nutrimaker.models.User.getUser().getId()) - LIMIT));
+import com.javafx.nutrimaker.models.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import static com.javafx.nutrimaker.database.DatabaseClient.*;
+    private final DatabaseClient db = new DatabaseClient();
+    private static final Set<String> COLUMNS = Set.of("user_id","patient_id","calories","fat",
+        "cholesterol","sodium","carbohydrates","protein","calcium","iron","note",
+        "rest_day","target_gender","meals_per_day","creation_date");
+    public List<DietSummary> getDiets(int offset, int limit, int userId) throws IOException {
+        if (offset < 0 || limit < 1) throw new IllegalArgumentException("PaginaciÃ³n invÃ¡lida");
+        JsonArray rows = db.read(c -> query(c, """
+            SELECT d.diet_id,p.name AS patient_name,p.weight,p.height,DATE(d.creation_date) AS creation_date
+            FROM diet d JOIN patient p ON p.patient_id=d.patient_id
+            WHERE d.user_id=? ORDER BY d.diet_id DESC LIMIT ? OFFSET ?
+            """, userId,limit,offset));
+        List<DietSummary> result = new ArrayList<>();
+        for (JsonElement row : rows) result.add(new Gson().fromJson(row, DietSummary.class));
+        return result;
+    public int getTotalDietsCount(int userId) throws IOException {
+        return db.read(c -> query(c,"SELECT COUNT(*) AS total FROM diet WHERE user_id=?",userId)
+            .get(0).getAsJsonObject().get("total").getAsInt());
+    public String getDietById(int id) throws IOException {
+        return db.read(c -> one(query(c,"SELECT * FROM diet WHERE diet_id=?",id)));
+    public String getDietsByUserId(int id) throws IOException {
+        return db.read(c -> items(query(c,"SELECT * FROM diet WHERE user_id=? ORDER BY diet_id DESC",id)));
+    public String getDietsByPatientId(int id) throws IOException {
+        return db.read(c -> items(query(c,"SELECT * FROM diet WHERE patient_id=? ORDER BY diet_id DESC",id)));
+    private static Map<String,Object> validated(Map<String,Object> data) {
+        if (data.isEmpty() || !COLUMNS.containsAll(data.keySet()))
+            throw new IllegalArgumentException("Campos de dieta invÃ¡lidos");
+        Map<String,Object> values = new LinkedHashMap<>(data);
+        if (values.get("creation_date") instanceof String date)
+            values.put("creation_date", java.time.LocalDateTime.ofInstant(Instant.parse(date),java.time.ZoneOffset.UTC));
+        return values;
+    static int insertDiet(Connection c, Map<String,Object> data) throws SQLException {
+        Map<String,Object> values = validated(data);
+        return insert(c,"INSERT INTO diet (" + String.join(",",values.keySet()) + ") VALUES ("
+            + String.join(",",Collections.nCopies(values.size(),"?")) + ")",values.values().toArray());
+    public String createDiet(Map<String,Object> data) throws IOException {
+        return db.read(c -> one(query(c,"SELECT * FROM diet WHERE diet_id=?",insertDiet(c,data))));
+    public String updateDiet(int id, Map<String,Object> data) throws IOException {
+        Map<String,Object> values = validated(data);
+        List<Object> args = new ArrayList<>(values.values());
+        args.add(id);
+        String assignments = String.join(",",values.keySet().stream().map(k -> k+"=?").toList());
+        return db.read(c -> {
+            execute(c,"UPDATE diet SET "+assignments+" WHERE diet_id=?",args.toArray());
+            return one(query(c,"SELECT * FROM diet WHERE diet_id=?",id));
+        });
+    public String deleteDiet(int id) throws IOException {
+        return db.read(c -> "{\"deleted\":"+execute(c,"DELETE FROM diet WHERE diet_id=?",id)+"}");
+    public boolean cloneDietById(int id) throws IOException {
+        return db.transaction(c -> {
+            JsonArray rows = query(c,"SELECT * FROM diet WHERE diet_id=?",id);
+            if (rows.isEmpty()) return false;
+            Map<String,Object> data = new Gson().fromJson(rows.get(0),new com.google.gson.reflect.TypeToken<Map<String,Object>>(){}.getType());
+            data.remove("diet_id");
+            data.remove("creation_date");
+            int newId = insertDiet(c,data);
+            execute(c,"""
+                INSERT INTO diet_meal(diet_id,meal_base_id,day,time_of_day,meal_type)
+                SELECT ?,meal_base_id,day,time_of_day,meal_type FROM diet_meal WHERE diet_id=?
+                """,newId,id);
+            return true;
+        });
+    public Diet getDietObjectById(int id) throws IOException, ParseException {
+        String json = db.read(c -> {
+            JsonArray rows = query(c,"""
+                SELECT d.*,p.name AS patient_name,p.age,p.weight,p.height,
+                dm.diet_meal_id,dm.meal_base_id,dm.day,dm.time_of_day,dm.meal_type,
+                m.name AS meal_name,m.meal_group,m.calories AS meal_calories,
+                m.fat AS meal_fat,m.cholesterol,m.sodium AS meal_sodium,
+                m.carbohydrates,m.protein AS meal_protein,m.calcium AS meal_calcium,
+                m.iron AS meal_iron,i.name AS ingredient_name,mi.amount AS ingredient_amount
+                FROM diet d JOIN patient p ON p.patient_id=d.patient_id
+                LEFT JOIN diet_meal dm ON dm.diet_id=d.diet_id
+                LEFT JOIN mealbase m ON m.meal_base_id=dm.meal_base_id
+                LEFT JOIN meal_ingredient mi ON mi.meal_base_id=m.meal_base_id
+                LEFT JOIN ingredient i ON i.ingredient_id=mi.ingredient_id
+                WHERE d.diet_id=? ORDER BY dm.day,dm.time_of_day,dm.diet_meal_id,i.ingredient_id
+                """,id);
+            if (rows.isEmpty()) throw new IOException("La dieta no existe: "+id);
+            return items(rows);
+        });
+        return buildDietFromFlatJson(json);
+        Map<Integer, Meal> mealsMap = new LinkedHashMap<>();            if (row.get("meal_base_id").isJsonNull()) continue;
+            int occurrenceId = row.get("diet_meal_id").getAsInt();
+            Meal meal = mealsMap.get(occurrenceId);
+                Date mealDate = java.sql.Date.valueOf(dayString.split("T")[0]);
+                mealsMap.put(occurrenceId, meal);
+import com.javafx.nutrimaker.database.DatabaseClient;
+import com.google.gson.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import static com.javafx.nutrimaker.database.DatabaseClient.*;
+public class MealRepository {
+    private final DatabaseClient db = new DatabaseClient();
+    public Meal getMealById(int id) throws IOException {
+        return db.read(c ->
+                MealAdapter.adaptAndDeserialize(
+                        one(query(
+                                c,
+                                "SELECT * FROM mealbase WHERE meal_base_id=?",
+                                id
+                        ))
+                )
+        );
+    private Meal selectMeal(
+            Connection c,
+            int calories,
+            String type,
+            String mealTime,
+            Set<Integer> usedMeals
+    ) throws SQLException {
+        StringBuilder sql = new StringBuilder(
+                "SELECT * FROM mealbase " +
+                "WHERE calories >= 1 " +
+                "AND calories <= ? " +
+                "AND meal_type = ? " +
+                "AND meal_time = ? "
+        );
+        List<Object> params = new ArrayList<>();
+        params.add(calories);
+        params.add(type);
+        params.add(mealTime);
+        if (!usedMeals.isEmpty()) {
+            sql.append("AND meal_base_id NOT IN (");
+            for (int i = 0; i < usedMeals.size(); i++) {
+                if (i > 0) {
+                    sql.append(",");
+                }
+                sql.append("?");
+            }
+            sql.append(") ");
+            params.addAll(usedMeals);
+        }
+        sql.append("ORDER BY RAND() LIMIT 1");
+        JsonArray rows =
+                query(
+                        c,
+                        sql.toString(),
+                        params.toArray()
+                );
+        return rows.isEmpty()
+                ? null
+                : MealAdapter.adaptAndDeserialize(
+                        rows.get(0).toString()
+                );
+    }
+    public Meal getMealsByTypeAndCalories(
+        int calories,
+        String type
+    ) throws IOException {
+
+        return db.read(c -> {
+
+            JsonArray rows = query(
+                    c,
+                    "SELECT * FROM mealbase " +
+                    "WHERE calories >= 1 " +
+                    "AND calories <= ? " +
+                    "AND meal_type = ? " +
+                    "ORDER BY RAND() LIMIT 1",
+                    calories,
+                    type
+            );
+
+            return rows.isEmpty()
+                    ? null
+                    : MealAdapter.adaptAndDeserialize(
+                            rows.get(0).toString()
+                    );
+        });
+    }
+    
+    private Map<String, Object> dietData(
+            int userId,
+            int patientId,
+            ValoresNutricionales values,
+            String restDay,
+            int mealsPerDay,
+            String note
+    ) {
+
+        return new Gson().fromJson(
+                new Gson().toJson(
+                        new DietRequest(
+                                userId,
+                                patientId,
+                                values,
+                                restDay,
+                                mealsPerDay,
+                                note
+                        )
+                ),
+                new com.google.gson.reflect.TypeToken<
+                        Map<String, Object>
+                        >() {
+                }.getType()
+        );
+    }
+
+                        String jsonBody = new Gson().toJson(jsonMap);
+                        System.out.println(jsonBody);
+                        String endpoint = "https://g123ac362d4a31c-appnutrimaker.adb.mx-queretaro-1.oraclecloudapps.com/ords/developer/diet_meal/";
+    public boolean sendDiet(
+            int userId,
+            int patientId,
+            ValoresNutricionales values,
+            String restDay,
+            int mealsPerDay,
+            String note
+    ) throws IOException {
+
+        return db.read(c ->
+                DietRepository.insertDiet(
+                        c,
+                        dietData(
+                                userId,
+                                patientId,
+                                values,
+                                restDay,
+                                mealsPerDay,
+                                note
+                        )
+                ) > 0
+        );
+    }
+
+    public boolean createNewDiet(
+            double calories,
+            int mealsPerDay,
+            String restDay,
+            int userId,
+            int patientId,
+            String note
+    ) {
+
+        if (!Double.isFinite(calories)
+                || calories <= 0
+                || calories > 6000
+                || mealsPerDay < 1
+                || mealsPerDay > 6
+                || patientId <= 0) {
+        try {
+            return db.transaction(c -> {
+                List<ComidaProgramada> plan =
+                        DistribuidorDeCalorias.distribuir(
+                                calories,
+                                mealsPerDay
+                        );
+                String[] tiempos =
+                        DistribuidorDeCalorias.obtenerTiempos(
+                                mealsPerDay
+                        );
+                ValoresNutricionales totals =
+                        new ValoresNutricionales();
+                Set<Integer> usedMeals =
+                        new HashSet<>();
+
+                for (int i = 0; i < plan.size(); i++) {
+                    ComidaProgramada scheduled =
+                            plan.get(i);
+                    String mealTime =
+                            tiempos[i];
+                    int remaining =
+                            (int) scheduled.getCaloriasAsignadas();
+                    while (remaining > 0) {
+                        Meal meal =
+                                selectMeal(
+                                        c,
+                                        remaining,
+                                        scheduled.getTipo(),
+                                        mealTime,
+                                        usedMeals
+                                );
+                        if (meal == null) {
+                            break;
+                        }
+
+                        scheduled.agregarOpcion(meal);
+                        totals.agregar(meal);
+                        usedMeals.add(
+                                meal.getMealBaseId()
+                        );
+                        remaining =
+                                (int) (
+                                        remaining
+                                                - meal.getCalories()
+                                );
+                    }
+
+                    if (scheduled.getOpciones().isEmpty()) {
+
+                        throw new IOException(
+                                "No hay alimentos para "
+                                        + mealTime
+                                        + " dentro del presupuesto de calorías."
+                        );
+                    }
+                }
+                int dietId =
+                        DietRepository.insertDiet(
+                                c,
+                                dietData(
+                                        userId,
+                                        patientId,
+                                        totals,
+                                        restDay,
+                                        mealsPerDay,
+                                        note
+                                )
+                        );
+
+                List<LocalTime> times =
+                        DistribuidorDeCalorias.obtenerHoras(
+                                mealsPerDay
+                        );
+
+                LocalDate start =
+                        LocalDate.now();
+
+                for (int i = 0; i < 7; i++) {
+
+                    LocalDate day =
+                            start.plusDays(i);
+
+                    if (day.getDayOfWeek()
+                            .name()
+                            .equalsIgnoreCase(restDay)) {
+
+                        continue;
+                    }
+
+                    for (int j = 0;
+                         j < plan.size();
+                         j++) {
+
+                        ComidaProgramada scheduled =
+                                plan.get(j);
+
+                        for (Meal meal :
+                                scheduled.getOpciones()) {
+
+                            execute(
+                                    c,
+                                    "INSERT INTO diet_meal " +
+                                    "(diet_id, meal_base_id, day, " +
+                                    "time_of_day, meal_type) " +
+                                    "VALUES (?, ?, ?, ?, ?)",
+
+                                    dietId,
+                                    meal.getMealBaseId(),
+                                    day,
+                                    day.atTime(times.get(j)),
+                                    scheduled.getTipo()
+                            );
+                        }
+                    }
+                }
+
+                return true;
+            });
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+            return false;
+        }
+    }
+}
+import static com.javafx.nutrimaker.database.DatabaseClient.*;
+    private final DatabaseClient db = new DatabaseClient();
+        return db.read(c -> items(query(c, "SELECT * FROM patient ORDER BY patient_id")));
+        return db.read(c -> one(query(c, "SELECT * FROM patient WHERE patient_id=?", id)));
+    }
+    public int createPatientAndGetId(String name, int age, Double weight, Double height) throws IOException {
+        return db.read(c -> insert(c, "INSERT INTO patient(name,age,weight,height) VALUES (?,?,?,?)", name, age, weight, height));
+        try { createPatientAndGetId(name, age, weight, height); return true; }
+        catch (IOException e) { e.printStackTrace(); return false; }
+        return db.read(c -> {
+            execute(c, "UPDATE patient SET name=?,age=?,weight=?,height=? WHERE patient_id=?", name,age,weight,height,id);
+            return one(query(c, "SELECT * FROM patient WHERE patient_id=?", id));
+        });
+        return db.read(c -> "{\"deleted\":" + execute(c, "DELETE FROM patient WHERE patient_id=?", id) + "}");
+import static com.javafx.nutrimaker.database.DatabaseClient.*;
+    private final DatabaseClient db = new DatabaseClient();
+        return db.read(c -> items(query(c, "SELECT user_id, email FROM useraccount ORDER BY user_id")));
+            String hash = BCrypt.hashpw(plainPassword, BCrypt.gensalt());
+            db.read(c -> insert(c, "INSERT INTO useraccount(email, password) VALUES (?, ?)", email, hash));
+        } catch (IOException e) { e.printStackTrace(); return false; }
+            JsonArray rows = db.read(c -> query(c, "SELECT user_id FROM useraccount WHERE email=?", email));
+            return rows.isEmpty() ? null : rows.get(0).getAsJsonObject().get("user_id").getAsInt();
+        } catch (IOException e) { e.printStackTrace(); return null; }
+            JsonArray rows = db.read(c -> query(c, "SELECT password FROM useraccount WHERE email=?", email));
+            return !rows.isEmpty() && BCrypt.checkpw(plainPassword, rows.get(0).getAsJsonObject().get("password").getAsString());
+        } catch (IOException | IllegalArgumentException e) { e.printStackTrace(); return false; }
+.build/
+.build-log.txt
+.env
+*.log
+    private int patientId;
+
+    public void setPatientId(int patientId) { this.patientId = patientId; }
+        return switch (day) {
+            case "Lunes" -> "MONDAY";
+            case "Martes" -> "TUESDAY";
+            case "Miercoles" -> "WEDNESDAY";
+            case "Jueves" -> "THURSDAY";
+            case "Viernes" -> "FRIDAY";
+            case "Sabado" -> "SATURDAY";
+            case "Domingo" -> "SUNDAY";
+            default -> "UNKNOWN";
+        };
+            if (mealRepository.createNewDiet(cantCalories, foodQuantity, getRestDay(), User.getUser().getId(), patientId, note)) {
+            } else {
+                dialog("No se pudo crear la dieta. Revisa la conexión a MySQL y que el catálogo tenga alimentos suficientes.");
+        nextButton.setVisible(offset < (dietRepo.getTotalDietsCount(com.javafx.nutrimaker.models.User.getUser().getId()) - LIMIT));
+        boolean result = userRepo.verifyPasswordByEmail(
+            emailTextField.getText(),
+            passwordTextField.getText()
+        );
+
+        System.out.println("Correo: " + emailTextField.getText());
+        System.out.println("Contraseña válida: " + result);
+
+        return result;
+    }
+    public void dialog(String warningMessage) throws IOException {
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("DialogInputs.fxml"));
+        Parent parent = loader.load();
+        DialogController dialog = loader.getController();
+        dialog.setText(warningMessage);
+            dialog("No se admite texto vacio");
+    private int patientId;
+            try {
+                patientId = new PatientRepository().createPatientAndGetId(nameTextField.getText(), age, weight, height);
+            } catch (IOException e) {
+                dialog("No se pudo guardar el paciente. Revisa la conexión a MySQL.");
+                return;
+            }
+        ((CreateDietController) loader.getController()).setPatientId(patientId);
+            dialog("No se admite texto vacio");
+    public void dialog(String warningMessage) throws IOException {
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("DialogInputs.fxml"));
+        Parent parent = loader.load();
+        DialogController dialog = loader.getController();
+        dialog.setText(warningMessage);
+        stage.show();
+import com.google.gson.*;
+import java.sql.*;
+import java.time.*;
+    @FunctionalInterface
+    public interface Work<T> { T run(Connection c) throws SQLException, IOException; }
+    public Connection connect() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/nutrimaker?useSSL=false&serverTimezone=UTC";
+        String user = "root";
+        String password = "";
+        return DriverManager.getConnection(url, user, password);
+    public <T> T read(Work<T> work) throws IOException {
+        try (Connection c = connect()) { return work.run(c); }
+        catch (SQLException e) { throw new IOException("Error de MySQL: " + e.getMessage(), e); }
+    public <T> T transaction(Work<T> work) throws IOException {
+        return read(c -> {
+            c.setAutoCommit(false);
+            try {
+                T result = work.run(c);
+                c.commit();
+                return result;
+            } catch (SQLException | IOException | RuntimeException e) {
+                try { c.rollback(); } catch (SQLException rollback) { e.addSuppressed(rollback); }
+                throw e;
+            }
+        });
+    private static void bind(PreparedStatement s, Object... args) throws SQLException {
+        for (int i = 0; i < args.length; i++) s.setObject(i + 1, args[i]);
+    public static JsonArray query(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql)) {
+            bind(s, args);
+            try (ResultSet rs = s.executeQuery()) {
+                JsonArray rows = new JsonArray();
+                ResultSetMetaData meta = rs.getMetaData();
+                while (rs.next()) {
+                    JsonObject row = new JsonObject();
+                    for (int i = 1; i <= meta.getColumnCount(); i++) {
+                        String key = meta.getColumnLabel(i);
+                        Object v = rs.getObject(i);
+                        if (v == null) row.add(key, JsonNull.INSTANCE);
+                        else if (v instanceof Number n) row.addProperty(key, n);
+                        else if (v instanceof java.sql.Date d) row.addProperty(key, d.toLocalDate().toString());
+                        else if (v instanceof Timestamp t) row.addProperty(key, t.toLocalDateTime().toInstant(ZoneOffset.UTC).toString());
+                        else if (v instanceof LocalDateTime t) row.addProperty(key, t.toInstant(ZoneOffset.UTC).toString());
+                        else row.addProperty(key, v.toString());
+                    }
+                    rows.add(row);
+                }
+                return rows;
+            }
+        }
+    }
+    public static int execute(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql)) {
+            bind(s, args);
+            return s.executeUpdate();
+    public static int insert(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+            bind(s, args);
+            s.executeUpdate();
+            try (ResultSet keys = s.getGeneratedKeys()) {
+                if (!keys.next()) throw new SQLException("No se recibiÃ³ el ID del registro creado.");
+                return keys.getInt(1);
+    public static String items(JsonArray rows) {
+        JsonObject result = new JsonObject();
+        result.add("items", rows);
+        return result.toString();
+    }
+    public static String one(JsonArray rows) throws IOException {
+        if (rows.isEmpty()) throw new IOException("No se encontrÃ³ el registro solicitado.");
+        return rows.get(0).toString();
+    }
+        this.rest_day = restDay == null ? null : restDay.toUpperCase(java.util.Locale.ROOT);
+            6, new String[]{
+                    "BREAKFAST",
+                    "SNACK",
+                    "LUNCH",
+                    "LUNCH",
+                    "SNACK",
+                    "DINNER"
+            },
+
+            5, new String[]{
+                    "BREAKFAST",
+                    "SNACK",
+                    "LUNCH",
+                    "SNACK",
+                    "DINNER"
+            },
+
+            4, new String[]{
+                    "BREAKFAST",
+                    "LUNCH",
+                    "LUNCH",
+                    "SNACK"
+            },
+
+            3, new String[]{
+                    "BREAKFAST",
+                    "LUNCH",
+                    "DINNER"
+            },
+
+            2, new String[]{
+                    "BREAKFAST",
+                    "LUNCH"
+            },
+
+            1, new String[]{
+                    "BREAKFAST"
+            }
+    );
+
+    private static final Map<Integer, String[]> tiemposComida = Map.of(
+            6, new String[]{
+                    "DESAYUNO",
+                    "COLACION_MATUTINA",
+                    "ALMUERZO",
+                    "COMIDA",
+                    "COLACION_VESPERTINA",
+                    "CENA"
+            },
+
+            5, new String[]{
+                    "DESAYUNO",
+                    "COLACION_MATUTINA",
+                    "COMIDA",
+                    "COLACION_VESPERTINA",
+                    "CENA"
+            },
+
+            4, new String[]{
+                    "DESAYUNO",
+                    "ALMUERZO",
+                    "COMIDA",
+                    "COLACION_VESPERTINA"
+            },
+
+            3, new String[]{
+                    "DESAYUNO",
+                    "COMIDA",
+                    "CENA"
+            },
+
+            2, new String[]{
+                    "DESAYUNO",
+                    "COMIDA"
+            },
+
+            1, new String[]{
+                    "DESAYUNO"
+            }
+
+            6, new Integer[]{
+                    25, 10, 12, 22, 10, 21
+            },
+
+            5, new Integer[]{
+                    30, 10, 25, 10, 25
+            },
+
+            4, new Integer[]{
+                    25, 25, 30, 20
+            },
+
+            3, new Integer[]{
+                    30, 40, 30
+            },
+
+            2, new Integer[]{
+                    50, 50
+            },
+
+            1, new Integer[]{
+                    100
+            }
+    public static List<ComidaProgramada> distribuir(
+            double caloriasTotales,
+            int comidasPorDia) {
+        String[] tiempos = tiemposComida.get(comidasPorDia);
+        if (tipos == null || tiempos == null || porcentajes == null) {
+            throw new IllegalArgumentException(
+                    "El número de comidas debe estar entre 1 y 6."
+            );
+        }
+            double caloriasAsignadas =
+                    caloriasTotales * porcentajes[i] / 100.0;
+
+            ComidaProgramada comida =
+                    new ComidaProgramada(
+                            tipos[i],
+                            caloriasAsignadas
+                    );
+
+            resultado.add(comida);
+    public static String[] obtenerTiempos(int comidasPorDia) {
+        String[] tiempos = tiemposComida.get(comidasPorDia);
+
+        if (tiempos == null) {
+            throw new IllegalArgumentException(
+                    "El número de comidas debe estar entre 1 y 6."
+            );
+        }
+
+        return tiempos;
+    }
+            throw new IllegalArgumentException(
+                    "El número de comidas por día debe estar entre 1 y 6."
+            );
+        LocalTime inicio = LocalTime.of(8, 0);
+        LocalTime fin = LocalTime.of(20, 0);
+        int minutosTotales =
+                (fin.toSecondOfDay() - inicio.toSecondOfDay()) / 60;
+
+        int intervalo =
+                minutosTotales /
+                        (comidasPorDia - 1 > 0
+                                ? comidasPorDia - 1
+                                : 1);
+            LocalTime horaComida =
+                    inicio.plusMinutes(intervalo * i);
+}
+    @SerializedName("meal_time")
+    private String mealTime;
+    public String getMealTime() {
+        return mealTime;
+    }
+
+    public void setMealTime(String mealTime) {
+        this.mealTime = mealTime;
+    }
+import com.javafx.nutrimaker.models.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import static com.javafx.nutrimaker.database.DatabaseClient.*;
+    private final DatabaseClient db = new DatabaseClient();
+    private static final Set<String> COLUMNS = Set.of("user_id","patient_id","calories","fat",
+        "cholesterol","sodium","carbohydrates","protein","calcium","iron","note",
+        "rest_day","target_gender","meals_per_day","creation_date");
+    public List<DietSummary> getDiets(int offset, int limit, int userId) throws IOException {
+        if (offset < 0 || limit < 1) throw new IllegalArgumentException("PaginaciÃ³n invÃ¡lida");
+        JsonArray rows = db.read(c -> query(c, """
+            SELECT d.diet_id,p.name AS patient_name,p.weight,p.height,DATE(d.creation_date) AS creation_date
+            FROM diet d JOIN patient p ON p.patient_id=d.patient_id
+            WHERE d.user_id=? ORDER BY d.diet_id DESC LIMIT ? OFFSET ?
+            """, userId,limit,offset));
+        List<DietSummary> result = new ArrayList<>();
+        for (JsonElement row : rows) result.add(new Gson().fromJson(row, DietSummary.class));
+        return result;
+    public int getTotalDietsCount(int userId) throws IOException {
+        return db.read(c -> query(c,"SELECT COUNT(*) AS total FROM diet WHERE user_id=?",userId)
+            .get(0).getAsJsonObject().get("total").getAsInt());
+    public String getDietById(int id) throws IOException {
+        return db.read(c -> one(query(c,"SELECT * FROM diet WHERE diet_id=?",id)));
+    public String getDietsByUserId(int id) throws IOException {
+        return db.read(c -> items(query(c,"SELECT * FROM diet WHERE user_id=? ORDER BY diet_id DESC",id)));
+    public String getDietsByPatientId(int id) throws IOException {
+        return db.read(c -> items(query(c,"SELECT * FROM diet WHERE patient_id=? ORDER BY diet_id DESC",id)));
+    private static Map<String,Object> validated(Map<String,Object> data) {
+        if (data.isEmpty() || !COLUMNS.containsAll(data.keySet()))
+            throw new IllegalArgumentException("Campos de dieta invÃ¡lidos");
+        Map<String,Object> values = new LinkedHashMap<>(data);
+        if (values.get("creation_date") instanceof String date)
+            values.put("creation_date", java.time.LocalDateTime.ofInstant(Instant.parse(date),java.time.ZoneOffset.UTC));
+        return values;
+    static int insertDiet(Connection c, Map<String,Object> data) throws SQLException {
+        Map<String,Object> values = validated(data);
+        return insert(c,"INSERT INTO diet (" + String.join(",",values.keySet()) + ") VALUES ("
+            + String.join(",",Collections.nCopies(values.size(),"?")) + ")",values.values().toArray());
+    public String createDiet(Map<String,Object> data) throws IOException {
+        return db.read(c -> one(query(c,"SELECT * FROM diet WHERE diet_id=?",insertDiet(c,data))));
+    public String updateDiet(int id, Map<String,Object> data) throws IOException {
+        Map<String,Object> values = validated(data);
+        List<Object> args = new ArrayList<>(values.values());
+        args.add(id);
+        String assignments = String.join(",",values.keySet().stream().map(k -> k+"=?").toList());
+        return db.read(c -> {
+            execute(c,"UPDATE diet SET "+assignments+" WHERE diet_id=?",args.toArray());
+            return one(query(c,"SELECT * FROM diet WHERE diet_id=?",id));
+        });
+    public String deleteDiet(int id) throws IOException {
+        return db.read(c -> "{\"deleted\":"+execute(c,"DELETE FROM diet WHERE diet_id=?",id)+"}");
+    public boolean cloneDietById(int id) throws IOException {
+        return db.transaction(c -> {
+            JsonArray rows = query(c,"SELECT * FROM diet WHERE diet_id=?",id);
+            if (rows.isEmpty()) return false;
+            Map<String,Object> data = new Gson().fromJson(rows.get(0),new com.google.gson.reflect.TypeToken<Map<String,Object>>(){}.getType());
+            data.remove("diet_id");
+            data.remove("creation_date");
+            int newId = insertDiet(c,data);
+            execute(c,"""
+                INSERT INTO diet_meal(diet_id,meal_base_id,day,time_of_day,meal_type)
+                SELECT ?,meal_base_id,day,time_of_day,meal_type FROM diet_meal WHERE diet_id=?
+                """,newId,id);
+            return true;
+        });
+     public Diet getDietObjectById(int id) throws IOException, ParseException {
+        String json = db.read(c -> {
+            JsonArray rows = query(c,"""
+                SELECT d.*,p.name AS patient_name,p.age,p.weight,p.height,
+                dm.diet_meal_id,dm.meal_base_id,dm.day,dm.time_of_day,dm.meal_type,
+                m.name AS meal_name,m.meal_group,m.calories AS meal_calories,
+                m.fat AS meal_fat,m.cholesterol,m.sodium AS meal_sodium,
+                m.carbohydrates,m.protein AS meal_protein,m.calcium AS meal_calcium,
+                m.iron AS meal_iron,i.name AS ingredient_name,mi.amount AS ingredient_amount
+                FROM diet d JOIN patient p ON p.patient_id=d.patient_id
+                LEFT JOIN diet_meal dm ON dm.diet_id=d.diet_id
+                LEFT JOIN mealbase m ON m.meal_base_id=dm.meal_base_id
+                LEFT JOIN meal_ingredient mi ON mi.meal_base_id=m.meal_base_id
+                LEFT JOIN ingredient i ON i.ingredient_id=mi.ingredient_id
+                WHERE d.diet_id=? ORDER BY dm.day,dm.time_of_day,dm.diet_meal_id,i.ingredient_id
+                """,id);
+            if (rows.isEmpty()) throw new IOException("La dieta no existe: "+id);
+            return items(rows);
+        });
+        return buildDietFromFlatJson(json);
+        Map<Integer, Meal> mealsMap = new LinkedHashMap<>();
+            if (row.get("meal_base_id").isJsonNull()) continue;
+            int occurrenceId = row.get("diet_meal_id").getAsInt();
+            Meal meal = mealsMap.get(occurrenceId);
+                Date mealDate = java.sql.Date.valueOf(dayString.split("T")[0]);
+                mealsMap.put(occurrenceId, meal);
+import com.javafx.nutrimaker.database.DatabaseClient;
+import com.google.gson.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import static com.javafx.nutrimaker.database.DatabaseClient.*;
+public class MealRepository {
+    private final DatabaseClient db = new DatabaseClient();
+    public Meal getMealById(int id) throws IOException {
+        return db.read(c ->
+                MealAdapter.adaptAndDeserialize(
+                        one(query(
+                                c,
+                                "SELECT * FROM mealbase WHERE meal_base_id=?",
+                                id
+                        ))
+                )
+        );
+    private Meal selectMeal(
+            Connection c,
+            int calories,
+            String type,
+            String mealTime,
+            Set<Integer> usedMeals
+    ) throws SQLException {
+        StringBuilder sql = new StringBuilder(
+                "SELECT * FROM mealbase " +
+                "WHERE calories >= 1 " +
+                "AND calories <= ? " +
+                "AND meal_type = ? " +
+                "AND meal_time = ? "
+        );
+        List<Object> params = new ArrayList<>();
+        params.add(calories);
+        params.add(type);
+        params.add(mealTime);
+        if (!usedMeals.isEmpty()) {
+            sql.append("AND meal_base_id NOT IN (");
+
+            for (int i = 0; i < usedMeals.size(); i++) {
+                }
+                sql.append("?");
+            }
+            sql.append(") ");
+            params.addAll(usedMeals);
+        }
+        sql.append("ORDER BY RAND() LIMIT 1");
+        JsonArray rows =
+                query(
+                        c,
+                        sql.toString(),
+                        params.toArray()
+                );
+        return rows.isEmpty()
+                ? null
+                : MealAdapter.adaptAndDeserialize(
+                        rows.get(0).toString()
+                );
+    }
+    public Meal getMealsByTypeAndCalories(
+        int calories,
+        String type
+    ) throws IOException {
+
+        return db.read(c -> {
+
+            JsonArray rows = query(
+                    c,
+                    "SELECT * FROM mealbase " +
+                    "WHERE calories >= 1 " +
+                    "AND calories <= ? " +
+                    "AND meal_type = ? " +
+                    "ORDER BY RAND() LIMIT 1",
+                    calories,
+                    type
+            );
+
+            return rows.isEmpty()
+                    ? null
+                    : MealAdapter.adaptAndDeserialize(
+                            rows.get(0).toString()
+                    );
+        });
+    }
+    
+    private Map<String, Object> dietData(
+            int userId,
+            int patientId,
+            ValoresNutricionales values,
+            String restDay,
+            int mealsPerDay,
+            String note
+    ) {
+
+        return new Gson().fromJson(
+                new Gson().toJson(
+                        new DietRequest(
+                                userId,
+                                patientId,
+                                values,
+                                restDay,
+                                mealsPerDay,
+                                note
+                        )
+                ),
+                new com.google.gson.reflect.TypeToken<
+                        Map<String, Object>
+                        >() {
+                }.getType()
+        );
+    }
+    public boolean sendDiet(
+            int userId,
+            int patientId,
+            ValoresNutricionales values,
+            String restDay,
+            int mealsPerDay,
+            String note
+    ) throws IOException {
+
+        return db.read(c ->
+                DietRepository.insertDiet(
+                        c,
+                        dietData(
+                                userId,
+                                patientId,
+                                values,
+                                restDay,
+                                mealsPerDay,
+                                note
+                        )
+                ) > 0
+        );
+    }
+    public boolean createNewDiet(
+            double calories,
+            int mealsPerDay,
+            String restDay,
+            int userId,
+            int patientId,
+            String note
+    ) {
+
+        if (!Double.isFinite(calories)
+                || calories <= 0
+                || calories > 6000
+                || mealsPerDay < 1
+                || mealsPerDay > 6
+                || patientId <= 0) {
+        try {
+            return db.transaction(c -> {
+                List<ComidaProgramada> plan =
+                        DistribuidorDeCalorias.distribuir(
+                                calories,
+                                mealsPerDay
+                        );
+                String[] tiempos =
+                        DistribuidorDeCalorias.obtenerTiempos(
+                                mealsPerDay
+                        );
+                ValoresNutricionales totals =
+                        new ValoresNutricionales();
+                Set<Integer> usedMeals =
+                        new HashSet<>();
+                for (int i = 0; i < plan.size(); i++) {
+                    ComidaProgramada scheduled =
+                            plan.get(i);
+                    String mealTime =
+                            tiempos[i];
+                    int remaining =
+                            (int) scheduled.getCaloriasAsignadas();
+                    while (remaining > 0) {
+                        Meal meal =
+                                selectMeal(
+                                        c,
+                                        remaining,
+                                        scheduled.getTipo(),
+                                        mealTime,
+                                        usedMeals
+                                );
+                        if (meal == null) {
+                            break;
+                        }
+
+                        scheduled.agregarOpcion(meal);
+                        totals.agregar(meal);
+                        usedMeals.add(
+                                meal.getMealBaseId()
+                        );
+                        remaining =
+                                (int) (
+                                        remaining
+                                                - meal.getCalories()
+                                );
+                    }
+
+                    if (scheduled.getOpciones().isEmpty()) {
+
+                        throw new IOException(
+                                "No hay alimentos para "
+                                        + mealTime
+                                        + " dentro del presupuesto de calorías."
+                        );
+                    }
+                }
+                int dietId =
+                        DietRepository.insertDiet(
+                                c,
+                                dietData(
+                                        userId,
+                                        patientId,
+                                        totals,
+                                        restDay,
+                                        mealsPerDay,
+                                        note
+                                )
+                        );
+
+                List<LocalTime> times =
+                        DistribuidorDeCalorias.obtenerHoras(
+                                mealsPerDay
+                        );
+
+                LocalDate start =
+                        LocalDate.now();
+
+                for (int i = 0; i < 7; i++) {
+
+                    LocalDate day =
+                            start.plusDays(i);
+
+                    if (day.getDayOfWeek()
+                            .name()
+                            .equalsIgnoreCase(restDay)) {
+
+                        continue;
+                    }
+
+                    for (int j = 0;
+                         j < plan.size();
+                         j++) {
+
+                        ComidaProgramada scheduled =
+                                plan.get(j);
+
+                        for (Meal meal :
+                                scheduled.getOpciones()) {
+
+                            execute(
+                                    c,
+                                    "INSERT INTO diet_meal " +
+                                    "(diet_id, meal_base_id, day, " +
+                                    "time_of_day, meal_type) " +
+                                    "VALUES (?, ?, ?, ?, ?)",
+
+                                    dietId,
+                                    meal.getMealBaseId(),
+                                    day,
+                                    day.atTime(times.get(j)),
+                                    scheduled.getTipo()
+                            );
+                        }
+                    }
+                }
+
+                return true;
+            });
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+            return false;
+        }
+    }
+}
+import static com.javafx.nutrimaker.database.DatabaseClient.*;
+    private final DatabaseClient db = new DatabaseClient();
+        return db.read(c -> items(query(c, "SELECT * FROM patient ORDER BY patient_id")));
+        return db.read(c -> one(query(c, "SELECT * FROM patient WHERE patient_id=?", id)));
+    }
+    public int createPatientAndGetId(String name, int age, Double weight, Double height) throws IOException {
+        return db.read(c -> insert(c, "INSERT INTO patient(name,age,weight,height) VALUES (?,?,?,?)", name, age, weight, height));
+        try { createPatientAndGetId(name, age, weight, height); return true; }
+        catch (IOException e) { e.printStackTrace(); return false; }
+        return db.read(c -> {
+            execute(c, "UPDATE patient SET name=?,age=?,weight=?,height=? WHERE patient_id=?", name,age,weight,height,id);
+            return one(query(c, "SELECT * FROM patient WHERE patient_id=?", id));
+        });
+        return db.read(c -> "{\"deleted\":" + execute(c, "DELETE FROM patient WHERE patient_id=?", id) + "}");
+import static com.javafx.nutrimaker.database.DatabaseClient.*;
+    private final DatabaseClient db = new DatabaseClient();
+        return db.read(c -> items(query(c, "SELECT user_id, email FROM useraccount ORDER BY user_id")));
+            String hash = BCrypt.hashpw(plainPassword, BCrypt.gensalt());
+            db.read(c -> insert(c, "INSERT INTO useraccount(email, password) VALUES (?, ?)", email, hash));
+        } catch (IOException e) { e.printStackTrace(); return false; }
+            JsonArray rows = db.read(c -> query(c, "SELECT user_id FROM useraccount WHERE email=?", email));
+            return rows.isEmpty() ? null : rows.get(0).getAsJsonObject().get("user_id").getAsInt();
+        } catch (IOException e) { e.printStackTrace(); return null; }
+            JsonArray rows = db.read(c -> query(c, "SELECT password FROM useraccount WHERE email=?", email));
+            return !rows.isEmpty() && BCrypt.checkpw(plainPassword, rows.get(0).getAsJsonObject().get("password").getAsString());
+        } catch (IOException | IllegalArgumentException e) { e.printStackTrace(); return false; }
+    requires mysql.connector.j;
+        boolean result = userRepo.verifyPasswordByEmail(
+            emailTextField.getText(),
+            passwordTextField.getText()
+        );
+
+        System.out.println("Correo: " + emailTextField.getText());
+        System.out.println("Contraseña válida: " + result);
+
+        return result;
+    }
+    public void dialog(String warningMessage) throws IOException {
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("DialogInputs.fxml"));
+        Parent parent = loader.load();
+        DialogController dialog = loader.getController();
+        dialog.setText(warningMessage);
+            dialog("No se admite texto vacio");
+    private int patientId;
+            try {
+                patientId = new PatientRepository().createPatientAndGetId(nameTextField.getText(), age, weight, height);
+            } catch (IOException e) {
+                dialog("No se pudo guardar el paciente. Revisa la conexión a MySQL.");
+                return;
+            }
+        ((CreateDietController) loader.getController()).setPatientId(patientId);
+            dialog("No se admite texto vacio");
+    public void dialog(String warningMessage) throws IOException {
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("DialogInputs.fxml"));
+        Parent parent = loader.load();
+        DialogController dialog = loader.getController();
+        dialog.setText(warningMessage);
+        stage.show();
+import com.google.gson.*;
+import java.sql.*;
+import java.time.*;
+    @FunctionalInterface
+    public interface Work<T> { T run(Connection c) throws SQLException, IOException; }
+    public Connection connect() throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/nutrimaker?useSSL=false&serverTimezone=UTC";
+        String user = "root";
+        String password = "";
+        return DriverManager.getConnection(url, user, password);
+    public <T> T read(Work<T> work) throws IOException {
+        try (Connection c = connect()) { return work.run(c); }
+        catch (SQLException e) { throw new IOException("Error de MySQL: " + e.getMessage(), e); }
+    public <T> T transaction(Work<T> work) throws IOException {
+        return read(c -> {
+            c.setAutoCommit(false);
+            try {
+                T result = work.run(c);
+                c.commit();
+                return result;
+            } catch (SQLException | IOException | RuntimeException e) {
+                try { c.rollback(); } catch (SQLException rollback) { e.addSuppressed(rollback); }
+                throw e;
+            }
+        });
+    private static void bind(PreparedStatement s, Object... args) throws SQLException {
+        for (int i = 0; i < args.length; i++) s.setObject(i + 1, args[i]);
+public static JsonArray query(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql)) {
+            bind(s, args);
+            try (ResultSet rs = s.executeQuery()) {
+                JsonArray rows = new JsonArray();
+                ResultSetMetaData meta = rs.getMetaData();
+                while (rs.next()) {
+                    JsonObject row = new JsonObject();
+                    for (int i = 1; i <= meta.getColumnCount(); i++) {
+                        String key = meta.getColumnLabel(i);
+                        Object v = rs.getObject(i);
+                        if (v == null) row.add(key, JsonNull.INSTANCE);
+                        else if (v instanceof Number n) row.addProperty(key, n);
+                        else if (v instanceof java.sql.Date d) row.addProperty(key, d.toLocalDate().toString());
+                        else if (v instanceof Timestamp t) row.addProperty(key, t.toLocalDateTime().toInstant(ZoneOffset.UTC).toString());
+                        else if (v instanceof LocalDateTime t) row.addProperty(key, t.toInstant(ZoneOffset.UTC).toString());
+                        else row.addProperty(key, v.toString());
+                    }
+                    rows.add(row);
+                }
+                return rows;
+            }
+        }
+    public static int execute(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql)) {
+            bind(s, args);
+            return s.executeUpdate();
+    public static int insert(Connection c, String sql, Object... args) throws SQLException {
+        try (PreparedStatement s = c.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+            bind(s, args);
+            s.executeUpdate();
+            try (ResultSet keys = s.getGeneratedKeys()) {
+                if (!keys.next()) throw new SQLException("No se recibiÃ³ el ID del registro creado.");
+                return keys.getInt(1);
+            }
+    public static String items(JsonArray rows) {
+        JsonObject result = new JsonObject();
+        result.add("items", rows);
+        return result.toString();
+    }
+    public static String one(JsonArray rows) throws IOException {
+        if (rows.isEmpty()) throw new IOException("No se encontrÃ³ el registro solicitado.");
+        return rows.get(0).toString();
+    }
+        this.rest_day = restDay == null ? null : restDay.toUpperCase(java.util.Locale.ROOT);
+            6, new String[]{
+                    "BREAKFAST",
+                    "SNACK",
+                    "LUNCH",
+                    "LUNCH",
+                    "SNACK",
+                    "DINNER"
+            },
+
+            5, new String[]{
+                    "BREAKFAST",
+                    "SNACK",
+                    "LUNCH",
+                    "SNACK",
+                    "DINNER"
+            },
+
+            4, new String[]{
+                    "BREAKFAST",
+                    "LUNCH",
+                    "LUNCH",
+                    "SNACK"
+            },
+
+            3, new String[]{
+                    "BREAKFAST",
+                    "LUNCH",
+                    "DINNER"
+            },
+
+            2, new String[]{
+                    "BREAKFAST",
+                    "LUNCH"
+            },
+
+            1, new String[]{
+                    "BREAKFAST"
+            }
+    );
+
+    private static final Map<Integer, String[]> tiemposComida = Map.of(
+            6, new String[]{
+                    "DESAYUNO",
+                    "COLACION_MATUTINA",
+                    "ALMUERZO",
+                    "COMIDA",
+                    "COLACION_VESPERTINA",
+                    "CENA"
+            },
+
+            5, new String[]{
+                    "DESAYUNO",
+                    "COLACION_MATUTINA",
+                    "COMIDA",
+                    "COLACION_VESPERTINA",
+                    "CENA"
+            },
+
+            4, new String[]{
+                    "DESAYUNO",
+                    "ALMUERZO",
+                    "COMIDA",
+                    "COLACION_VESPERTINA"
+            },
+
+            3, new String[]{
+                    "DESAYUNO",
+                    "COMIDA",
+                    "CENA"
+            },
+
+            2, new String[]{
+                    "DESAYUNO",
+                    "COMIDA"
+            },
+
+            1, new String[]{
+                    "DESAYUNO"
+            }
+
+            6, new Integer[]{
+                    25, 10, 12, 22, 10, 21
+            },
+
+            5, new Integer[]{
+                    30, 10, 25, 10, 25
+            },
+
+            4, new Integer[]{
+                    25, 25, 30, 20
+            },
+
+            3, new Integer[]{
+                    30, 40, 30
+            },
+
+            2, new Integer[]{
+                    50, 50
+            },
+
+            1, new Integer[]{
+                    100
+            }
+    public static List<ComidaProgramada> distribuir(
+            double caloriasTotales,
+            int comidasPorDia) {
+        String[] tiempos = tiemposComida.get(comidasPorDia);
+        if (tipos == null || tiempos == null || porcentajes == null) {
+            throw new IllegalArgumentException(
+                    "El número de comidas debe estar entre 1 y 6."
+            );
+        }
+            double caloriasAsignadas =
+                    caloriasTotales * porcentajes[i] / 100.0;
+
+            ComidaProgramada comida =
+                    new ComidaProgramada(
+                            tipos[i],
+                            caloriasAsignadas
+                    );
+
+            resultado.add(comida);
+    public static String[] obtenerTiempos(int comidasPorDia) {
+        String[] tiempos = tiemposComida.get(comidasPorDia);
+
+        if (tiempos == null) {
+            throw new IllegalArgumentException(
+                    "El número de comidas debe estar entre 1 y 6."
+            );
+        }
+
+        return tiempos;
+    }
+
+    public static List<LocalTime> obtenerHoras(int comidasPorDia) {
+            throw new IllegalArgumentException(
+                    "El número de comidas por día debe estar entre 1 y 6."
+            );
+        LocalTime inicio = LocalTime.of(8, 0);
+        LocalTime fin = LocalTime.of(20, 0);
+        int minutosTotales =
+                (fin.toSecondOfDay() - inicio.toSecondOfDay()) / 60;
+
+        int intervalo =
+                minutosTotales /
+                        (comidasPorDia - 1 > 0
+                                ? comidasPorDia - 1
+                                : 1);
+LocalTime horaComida =
+                    inicio.plusMinutes(intervalo * i);
+    @SerializedName("meal_time")
+    private String mealTime;
+    public String getMealTime() {
+        return mealTime;
+    }
+    public void setMealTime(String mealTime) {
+        this.mealTime = mealTime;
+    }
+                List<LocalTime> tiempos =
+                        DistribuidorDeCalorias.obtenerHoras(
+                            tiempos.get(i).toString();
+    requires mysql.connector.j;
+}
+
+    public void dialog() throws IOException {
+        URL fxml = getClass().getResource("EmptyInputs.fxml");
+
+        if (fxml == null) {
+            throw new IOException(
+                "No se encontró EmptyInputs.fxml. Revisa su ubicación en resources."
+            );
+        }
+
+        Parent parent = FXMLLoader.load(fxml);
+        infoPatient.add("Estatura: " + diet.getPatient().getHeight() + " cm");
+        mealsSort.put("BREAKFAST", 1);
+        mealsSort.put("SNACK", 2);
+        mealsSort.put("LUNCH", 3);
+        mealsSort.put("DINNER", 4);
+        // También admite los tipos si el modelo ya los entrega en español.
+        mealsSort.put("DESAYUNO", 1);
+        mealsSort.put("COLACION", 2);
+        mealsSort.put("COLACIÓN", 2);
+        mealsSort.put("COMIDA", 3);
+        mealsSort.put("CENA", 4);
+        List<String> days = Arrays.asList(
+            "lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"
+        );
+        Map<String, List<Meal>> mealsByDay = new LinkedHashMap<>();
+        for (String day : days) {
+        Locale spanish = new Locale("es", "ES");
+        for (Meal meal : diet.getMeals()) {
+            if (meal.getDay() == null) {
+                throw new IllegalStateException(
+                    "La comida \"" + meal.getName()
+                    + "\" (ID: " + meal.getMealBaseId()
+                    + ") no tiene un día asignado."
+                );
+            }
+
+            String day = sdf.format(meal.getDay()).toLowerCase(spanish);
+            List<Meal> dayMeals = mealsByDay.get(day);
+            if (dayMeals != null) {
+                dayMeals.add(meal);
+        Comparator<Meal> mealComparator = Comparator.comparing(meal ->
+            mealsSort.getOrDefault(meal.getMealType().toUpperCase(spanish), 99)
+        );
+        for (String day : days) {
+            mealsByDay.get(day).sort(mealComparator);
+        Table table = new Table(UnitValue.createPercentArray(new float[]{1}));
+        for (String day : days) {
+            if (meals.isEmpty()) {
+            Paragraph dayTitle = new Paragraph(day.toUpperCase(spanish))
+                .setFont(fontBold)
+                .setFontSize(12)
+                .setMarginTop(4)
+                .setMarginBottom(5);
+            Cell dayCell = new Cell()
+                .add(dayTitle)
+                .setPaddingLeft(8)
+                .setPaddingTop(5)
+                .setPaddingBottom(3)
+                .setBorder(Border.NO_BORDER)
+                .setBorderTop(new SolidBorder(1));
+            table.addCell(dayCell);
+
+            Cell mealsCell = new Cell()
+                .setPaddingLeft(12)
+                .setPaddingRight(8)
+                .setPaddingTop(2)
+                .setPaddingBottom(8)
+                .setBorder(Border.NO_BORDER);
+
+            for (Meal meal : meals) {
+                Paragraph type = new Paragraph(
+                    meal.getMealType() + "  \uE28D \uE2A5 \uE28D  " + meal.getName()
+                ).setFont(fontBold)
+                 .setMarginTop(3)
+                 .setMarginBottom(2);
+            double weight = Double.parseDouble(weightTextField.getText());
+            double height = Double.parseDouble(heightTextField.getText());
+
+            // Crear el paciente y recuperar su ID real
+            int patientId = new PatientRepository().createPatientAndGetId(
+                    nameTextField.getText(),
+                    age,
+                    weight,
+                    height
+            );
+
+            System.out.println("Paciente creado con ID: " + patientId);
+
+            // Abrir la ventana de creación de dieta pasando el ID
+            createDiet(event, patientId);
+    private void createDiet(ActionEvent event, int patientId) throws IOException {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("CreateDiet.fxml")
+        );
+        CreateDietController controller = loader.getController();
+        controller.setPatientId(patientId);
+
+        Stage stage = (Stage) ((Node) event.getSource())
+                .getScene().getWindow();
+    public static int nextId(Connection c, String table, String column) throws SQLException {
+        boolean allowed =
+                ("DIETA".equals(table) && "ID_DIETA".equals(column)) ||
+                ("COMIDA".equals(table) && "ID_COMIDA".equals(column)) ||
+                ("PACIENTE".equals(table) && "ID_PACIENTE".equals(column)) ||
+                ("USUARIO".equals(table) && "ID_USUARIO".equals(column));
+        if (!allowed) throw new SQLException("Tabla/columna no permitida para generar ID");
+        try (PreparedStatement s = c.prepareStatement(
+                "SELECT COALESCE(MAX(" + column + "), 0) + 1 FROM " + table);
+             ResultSet rs = s.executeQuery()) {
+            if (!rs.next()) throw new SQLException("No se pudo calcular el siguiente ID para " + table);
+            return rs.getInt(1);
+        }
+    }
+import java.sql.Time;
+import com.google.gson.reflect.TypeToken;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+private static final Map<String, String> FIELD_MAP = Map.ofEntries(
+            Map.entry("user_id", "ID_USUARIO"),
+            Map.entry("patient_id", "ID_PACIENTE"),
+            Map.entry("calories", "CALORIAS"),
+            Map.entry("fat", "GRASAS"),
+            Map.entry("cholesterol", "COLESTEROL"),
+            Map.entry("sodium", "SODIO"),
+            Map.entry("carbohydrates", "CARBOHIDRATOS"),
+            Map.entry("protein", "PROTEINA"),
+            Map.entry("calcium", "CALCIO"),
+            Map.entry("iron", "HIERRO"),
+            Map.entry("note", "COMENTARIO"),
+            Map.entry("rest_day", "DIA_DESCANSO"),
+            Map.entry("target_gender", "GENERO_DESTINATARIO"),
+            Map.entry("meals_per_day", "CANTIDAD_COMIDAS"),
+            Map.entry("creation_date", "FECHA_CREACION"),
+            // También se aceptan nombres del esquema español si un llamador los envía.
+            Map.entry("ID_USUARIO", "ID_USUARIO"), Map.entry("ID_PACIENTE", "ID_PACIENTE"),
+            Map.entry("CALORIAS", "CALORIAS"), Map.entry("GRASAS", "GRASAS"),
+            Map.entry("COLESTEROL", "COLESTEROL"), Map.entry("SODIO", "SODIO"),
+            Map.entry("CARBOHIDRATOS", "CARBOHIDRATOS"), Map.entry("PROTEINA", "PROTEINA"),
+            Map.entry("CALCIO", "CALCIO"), Map.entry("HIERRO", "HIERRO"),
+            Map.entry("COMENTARIO", "COMENTARIO"), Map.entry("DIA_DESCANSO", "DIA_DESCANSO"),
+            Map.entry("GENERO_DESTINATARIO", "GENERO_DESTINATARIO"),
+            Map.entry("CANTIDAD_COMIDAS", "CANTIDAD_COMIDAS"),
+            Map.entry("FECHA_CREACION", "FECHA_CREACION")
+    );
+
+    private static final String DIET_COLUMNS = """
+        ID_DIETA AS diet_id, ID_USUARIO AS user_id, ID_PACIENTE AS patient_id,
+        CALORIAS AS calories, GRASAS AS fat, COLESTEROL AS cholesterol,
+        SODIO AS sodium, CARBOHIDRATOS AS carbohydrates, PROTEINA AS protein,
+        CALCIO AS calcium, HIERRO AS iron, COMENTARIO AS note,
+        FECHA_CREACION AS creation_date, DIA_DESCANSO AS rest_day,
+        GENERO_DESTINATARIO AS target_gender, CANTIDAD_COMIDAS AS meals_per_day
+        """;
+
+        if (offset < 0 || limit < 1) throw new IllegalArgumentException("Paginación inválida");
+            SELECT d.ID_DIETA AS diet_id, p.NOMBRE AS patient_name,
+                   p.PESO AS weight, p.ALTURA AS height,
+                   DATE(d.FECHA_CREACION) AS creation_date
+            FROM DIETA d
+            JOIN PACIENTE p ON p.ID_PACIENTE=d.ID_PACIENTE
+            WHERE d.ID_USUARIO=?
+            ORDER BY d.ID_DIETA DESC LIMIT ? OFFSET ?
+            """, userId, limit, offset));
+        JsonArray rows = db.read(c -> query(c,
+                "SELECT COUNT(*) AS total FROM DIETA WHERE ID_USUARIO=?", userId));
+        return rows.isEmpty() ? 0 : rows.get(0).getAsJsonObject().get("total").getAsInt();
+        return db.read(c -> one(query(c, "SELECT " + DIET_COLUMNS + " FROM DIETA WHERE ID_DIETA=?", id)));
+        return db.read(c -> items(query(c,
+                "SELECT " + DIET_COLUMNS + " FROM DIETA WHERE ID_USUARIO=? ORDER BY ID_DIETA DESC", id)));
+        return db.read(c -> items(query(c,
+                "SELECT " + DIET_COLUMNS + " FROM DIETA WHERE ID_PACIENTE=? ORDER BY ID_DIETA DESC", id)));
+    }
+
+    private static Map<String, Object> validated(Map<String, Object> data) {
+        if (data == null || data.isEmpty()) throw new IllegalArgumentException("No se recibieron campos de dieta");
+        Map<String, Object> values = new LinkedHashMap<>();
+        for (Map.Entry<String, Object> entry : data.entrySet()) {
+            String column = FIELD_MAP.get(entry.getKey());
+            if (column == null) throw new IllegalArgumentException("Campo de dieta no permitido: " + entry.getKey());
+            Object value = entry.getValue();
+            if ("FECHA_CREACION".equals(column) && value instanceof String date) {
+                try {
+                    value = LocalDateTime.ofInstant(Instant.parse(date), ZoneOffset.UTC);
+                } catch (RuntimeException ex) {
+                    // Permite también fechas SQL ya serializadas como yyyy-MM-dd HH:mm:ss.
+                    value = LocalDateTime.parse(date.replace(' ', 'T'));
+                }
+            }
+            values.put(column, value);
+        }
+    public static int insertDiet(Connection c, Map<String, Object> data) throws SQLException {
+        Map<String, Object> values = validated(data);
+        values.putIfAbsent("FECHA_CREACION", LocalDateTime.now());
+        int id = nextId(c, "DIETA", "ID_DIETA");
+        List<String> columns = new ArrayList<>();
+        columns.add("ID_DIETA");
+        columns.addAll(values.keySet());
+        List<Object> args = new ArrayList<>();
+        args.add(id);
+        args.addAll(values.values());
+        String sql = "INSERT INTO DIETA (" + String.join(",", columns) + ") VALUES (" +
+                String.join(",", Collections.nCopies(columns.size(), "?")) + ")";
+        execute(c, sql, args.toArray());
+        return id;
+    public String createDiet(Map<String, Object> data) throws IOException {
+        return db.transaction(c -> {
+            int id = insertDiet(c, data);
+            return one(query(c, "SELECT " + DIET_COLUMNS + " FROM DIETA WHERE ID_DIETA=?", id));
+        });
+    public String updateDiet(int id, Map<String, Object> data) throws IOException {
+        Map<String, Object> values = validated(data);
+        String assignments = String.join(",", values.keySet().stream().map(k -> k + "=?").toList());
+        return db.transaction(c -> {
+            int changed = execute(c, "UPDATE DIETA SET " + assignments + " WHERE ID_DIETA=?", args.toArray());
+            if (changed == 0) throw new IOException("No existe la dieta " + id);
+            return one(query(c, "SELECT " + DIET_COLUMNS + " FROM DIETA WHERE ID_DIETA=?", id));
+        return db.transaction(c -> {
+            execute(c, "DELETE FROM INGREDIENTE_COMIDA WHERE ID_COMIDA IN (SELECT ID_COMIDA FROM COMIDA WHERE ID_DIETA=?)", id);
+            execute(c, "DELETE FROM COMIDA WHERE ID_DIETA=?", id);
+            int deleted = execute(c, "DELETE FROM DIETA WHERE ID_DIETA=?", id);
+            return "{\"deleted\":" + deleted + "}";
+        });
+            JsonArray rows = query(c, "SELECT " + DIET_COLUMNS + " FROM DIETA WHERE ID_DIETA=?", id);
+            Map<String, Object> data = new Gson().fromJson(rows.get(0), new TypeToken<Map<String, Object>>() {}.getType());
+            int newId = insertDiet(c, data);
+            JsonArray meals = query(c, "SELECT ID_COMIDA FROM COMIDA WHERE ID_DIETA=? ORDER BY HORA,ID_COMIDA", id);
+            for (JsonElement element : meals) {
+                int sourceMealId = element.getAsJsonObject().get("ID_COMIDA").getAsInt();
+                copyMealToDiet(c, sourceMealId, newId, null);
+            }
+public static int copyMealToDiet(Connection c, int sourceMealId, int targetDietId, LocalTime overrideTime)
+            throws SQLException, IOException {
+        return copyMealToDiet(c, sourceMealId, targetDietId, overrideTime, null);
+    }
+
+    /** dayOfWeek: 1=lunes ... 7=domingo. null conserva el día de la fila fuente. */
+    public static int copyMealToDiet(Connection c, int sourceMealId, int targetDietId,
+                                     LocalTime overrideTime, Integer dayOfWeek)
+            throws SQLException, IOException {
+        JsonArray sourceRows = query(c, """
+            SELECT ID_COMIDA, HORA, DIA_SEMANA, TIPO_COMIDA, GRUPO_COMIDA, CALORIAS, GRASAS,
+                   COLESTEROL, SODIO, CARBOHIDRATOS, PROTEINA, CALCIO, HIERRO, NOMBRE_COMIDA
+            FROM COMIDA WHERE ID_COMIDA=?
+            """, sourceMealId);
+        if (sourceRows.isEmpty()) throw new IOException("No existe la comida de origen " + sourceMealId);
+        JsonObject r = sourceRows.get(0).getAsJsonObject();
+        int newMealId = nextId(c, "COMIDA", "ID_COMIDA");
+        Object hour = overrideTime != null ? Time.valueOf(overrideTime) :
+                (r.get("HORA").isJsonNull() ? null : Time.valueOf(r.get("HORA").getAsString()));
+        Integer day = dayOfWeek != null ? dayOfWeek :
+                (r.has("DIA_SEMANA") && !r.get("DIA_SEMANA").isJsonNull()
+                        ? r.get("DIA_SEMANA").getAsInt() : null);
+        execute(c, """
+            INSERT INTO COMIDA
+              (ID_COMIDA,ID_DIETA,HORA,DIA_SEMANA,TIPO_COMIDA,GRUPO_COMIDA,CALORIAS,GRASAS,
+               COLESTEROL,SODIO,CARBOHIDRATOS,PROTEINA,CALCIO,HIERRO,NOMBRE_COMIDA)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+            """, newMealId, targetDietId, hour, day,
+                nullableString(r, "TIPO_COMIDA"), nullableString(r, "GRUPO_COMIDA"),
+                nullableDouble(r, "CALORIAS"), nullableDouble(r, "GRASAS"),
+                nullableDouble(r, "COLESTEROL"), nullableDouble(r, "SODIO"),
+                nullableDouble(r, "CARBOHIDRATOS"), nullableDouble(r, "PROTEINA"),
+                nullableDouble(r, "CALCIO"), nullableDouble(r, "HIERRO"), nullableString(r, "NOMBRE_COMIDA"));
+        execute(c, """
+            INSERT INTO INGREDIENTE_COMIDA (ID_INGREDIENTE,ID_COMIDA,CANTIDAD)
+            SELECT ID_INGREDIENTE,?,CANTIDAD FROM INGREDIENTE_COMIDA WHERE ID_COMIDA=?
+            """, newMealId, sourceMealId);
+        return newMealId;
+    }
+
+    private static String nullableString(JsonObject row, String key) {
+        return !row.has(key) || row.get(key).isJsonNull() ? null : row.get(key).getAsString();
+    }
+    private static Double nullableDouble(JsonObject row, String key) {
+        return !row.has(key) || row.get(key).isJsonNull() ? null : row.get(key).getAsDouble();
+    }
+
+            JsonArray rows = query(c, """
+                SELECT d.ID_DIETA AS diet_id, d.ID_USUARIO AS user_id, d.ID_PACIENTE AS patient_id,
+                       d.CALORIAS AS calories, d.GRASAS AS fat, d.COLESTEROL AS cholesterol,
+                       d.SODIO AS sodium, d.CARBOHIDRATOS AS carbohydrates, d.PROTEINA AS protein,
+                       d.CALCIO AS calcium, d.HIERRO AS iron, d.COMENTARIO AS note,
+                       d.FECHA_CREACION AS creation_date, d.DIA_DESCANSO AS rest_day,
+                       d.GENERO_DESTINATARIO AS target_gender, d.CANTIDAD_COMIDAS AS meals_per_day,
+                       p.NOMBRE AS patient_name, p.EDAD AS age, p.PESO AS weight, p.ALTURA AS height,
+                       c.ID_COMIDA AS diet_meal_id, c.ID_COMIDA AS meal_base_id,
+                       c.HORA AS time_of_day, c.DIA_SEMANA AS day_of_week,
+                       c.TIPO_COMIDA AS meal_type, c.GRUPO_COMIDA AS meal_group,
+                       c.NOMBRE_COMIDA AS meal_name, c.CALORIAS AS meal_calories,
+                       c.GRASAS AS meal_fat, c.COLESTEROL AS cholesterol_meal,
+                       c.SODIO AS meal_sodium, c.CARBOHIDRATOS AS carbohydrates_meal,
+                       c.PROTEINA AS meal_protein, c.CALCIO AS meal_calcium, c.HIERRO AS meal_iron,
+                       i.ID_INGREDIENTE AS ingredient_id, i.NOMBRE AS ingredient_name,
+                       ic.CANTIDAD AS ingredient_amount
+                FROM DIETA d
+                JOIN PACIENTE p ON p.ID_PACIENTE=d.ID_PACIENTE
+                LEFT JOIN COMIDA c ON c.ID_DIETA=d.ID_DIETA
+                LEFT JOIN INGREDIENTE_COMIDA ic ON ic.ID_COMIDA=c.ID_COMIDA
+                LEFT JOIN INGREDIENTE i ON i.ID_INGREDIENTE=ic.ID_INGREDIENTE
+                WHERE d.ID_DIETA=?
+                ORDER BY c.DIA_SEMANA,c.HORA,c.ID_COMIDA,i.ID_INGREDIENTE
+                """, id);
+            if (rows.isEmpty()) throw new IOException("La dieta no existe: " + id);
+    public Diet buildDietFromFlatJson(String json) throws ParseException {
+        JsonObject root = JsonParser.parseString(json).getAsJsonObject();
+        JsonArray rows = root.getAsJsonArray("items");
+        LocalDate weekStart = LocalDate.now().with(java.time.DayOfWeek.MONDAY);
+        for (JsonElement element : rows) {
+            JsonObject row = element.getAsJsonObject();
+                diet.setDietID(intValue(row, "diet_id", 0));
+                String fullDate = stringValue(row, "creation_date", null);
+                if (fullDate != null) {
+                    String dateOnly = fullDate.length() >= 10 ? fullDate.substring(0, 10) : fullDate;
+                    LocalDate creationDay = LocalDate.parse(dateOnly);
+                    weekStart = creationDay.with(java.time.DayOfWeek.MONDAY);
+                    diet.setCreationDate(new SimpleDateFormat("yyyy-MM-dd").parse(dateOnly));
+                }
+                diet.setCalories(doubleValue(row, "calories"));
+                diet.setProtein(doubleValue(row, "protein"));
+                diet.setCalcium(doubleValue(row, "calcium"));
+                diet.setSodium(doubleValue(row, "sodium"));
+                diet.setIron(doubleValue(row, "iron"));
+                diet.setFats(doubleValue(row, "fat"));
+                diet.setNote(stringValue(row, "note", null));
+                Patient patient = new Patient(
+                        stringValue(row, "patient_name", null), intValue(row, "age", 0),
+                        nullableDouble(row, "weight"), nullableDouble(row, "height"),
+                        intValue(row, "patient_id", 0));
+            if (!row.has("diet_meal_id") || row.get("diet_meal_id").isJsonNull()) continue;
+                meal.setMealBaseId(intValue(row, "meal_base_id", occurrenceId));
+                meal.setName(stringValue(row, "meal_name", "Comida"));
+ int dayOfWeek = intValue(row, "day_of_week", 1);
+                if (dayOfWeek < 1 || dayOfWeek > 7) dayOfWeek = 1;
+                LocalDate mealDate = weekStart.plusDays(dayOfWeek - 1L);
+                meal.setDay(Date.from(mealDate.atStartOfDay(ZoneId.systemDefault()).toInstant()));
+                String timeString = stringValue(row, "time_of_day", null);
+                if (timeString != null && !timeString.isBlank()) {
+                    LocalTime localTime = LocalTime.parse(timeString.length() >= 8 ? timeString.substring(0, 8) : timeString);
+                    meal.setTimeOfDay(Date.from(LocalDate.now().atTime(localTime).atZone(ZoneId.systemDefault()).toInstant()));
+                }
+                meal.setMealType(stringValue(row, "meal_type", null));
+                meal.setMealGroup(stringValue(row, "meal_group", null));
+                meal.setCalories(doubleValue(row, "meal_calories"));
+                meal.setFat(doubleValue(row, "meal_fat"));
+                meal.setCholesterol(doubleValue(row, "cholesterol_meal"));
+                meal.setSodium(doubleValue(row, "meal_sodium"));
+                meal.setCarbohydrates(doubleValue(row, "carbohydrates_meal"));
+                meal.setProtein(doubleValue(row, "meal_protein"));
+                meal.setCalcium(doubleValue(row, "meal_calcium"));
+                meal.setIron(doubleValue(row, "meal_iron"));
+                mealsMap.put(occurrenceId, meal);
+                int ingredientId = intValue(row, "ingredient_id", -1);
+                boolean exists = meal.getIngredients().stream().anyMatch(i ->
+                        i.getName() != null && i.getName().equalsIgnoreCase(row.get("ingredient_name").getAsString()));
+                if (!exists) {
+                    ingredient.setName(row.get("ingredient_name").getAsString());
+                    ingredient.setAmount(doubleValue(row, "ingredient_amount"));
+    private static String stringValue(JsonObject row, String key, String fallback) {
+        return !row.has(key) || row.get(key).isJsonNull() ? fallback : row.get(key).getAsString();
+    }
+    private static int intValue(JsonObject row, String key, int fallback) {
+        return !row.has(key) || row.get(key).isJsonNull() ? fallback : row.get(key).getAsInt();
+    }
+    private static double doubleValue(JsonObject row, String key) {
+        return !row.has(key) || row.get(key).isJsonNull() ? 0.0 : row.get(key).getAsDouble();
+    }
+import java.time.LocalTime;
+import java.text.Normalizer;
+    private static final String MEAL_SELECT = """
+        SELECT ID_COMIDA AS meal_base_id, NOMBRE_COMIDA AS name,
+               TIPO_COMIDA AS meal_type, GRUPO_COMIDA AS meal_group,
+               CALORIAS AS calories, GRASAS AS fat, COLESTEROL AS cholesterol,
+               SODIO AS sodium, CARBOHIDRATOS AS carbohydrates, PROTEINA AS protein,
+               CALCIO AS calcium, HIERRO AS iron
+        FROM COMIDA
+        """;
+return db.read(c -> loadMeal(c, id));
+    private static Meal loadMeal(Connection c, int id) throws SQLException, IOException {
+        JsonArray rows = query(c, MEAL_SELECT + " WHERE ID_COMIDA=?", id);
+        if (rows.isEmpty()) throw new IOException("No existe la comida " + id);
+        Meal meal = MealAdapter.adaptAndDeserialize(rows.get(0).toString());
+        JsonArray ingredients = query(c, """
+            SELECT i.ID_INGREDIENTE AS ingredient_id, i.NOMBRE AS ingredient_name,
+                   ic.CANTIDAD AS ingredient_amount
+            FROM INGREDIENTE_COMIDA ic
+            JOIN INGREDIENTE i ON i.ID_INGREDIENTE=ic.ID_INGREDIENTE
+            WHERE ic.ID_COMIDA=? ORDER BY i.NOMBRE
+            """, id);
+        List<Ingredient> list = new ArrayList<>();
+        for (JsonElement element : ingredients) list.add(new Gson().fromJson(element, Ingredient.class));
+        meal.setIngredients(list);
+        return meal;
+    private static List<String> typeAliases(String type) {
+        String normalized = type == null ? "" : type.trim().toUpperCase(Locale.ROOT);
+        return switch (normalized) {
+            case "BREAKFAST", "DESAYUNO" -> List.of("BREAKFAST", "DESAYUNO");
+            case "LUNCH", "COMIDA", "ALMUERZO" -> List.of("LUNCH", "COMIDA", "ALMUERZO");
+            case "DINNER", "CENA" -> List.of("DINNER", "CENA");
+            case "SNACK", "COLACION", "COLACIÓN", "MERIENDA" -> List.of("SNACK", "COLACION", "COLACIÓN", "MERIENDA");
+            default -> List.of(normalized);
+        };
+    }
+
+    /** Selecciona la receta disponible con más calorías sin superar el presupuesto de la comida. */
+    private Meal selectMeal(Connection c, double calorieBudget, String type, Set<Integer> usedMeals)
+            throws SQLException, IOException {
+        List<String> aliases = typeAliases(type);
+        StringBuilder sql = new StringBuilder(MEAL_SELECT)
+                .append(" WHERE CALORIAS > 0 AND CALORIAS <= ? AND UPPER(TRIM(TIPO_COMIDA)) IN (");
+        List<Object> params = new ArrayList<>();
+        params.add(calorieBudget);
+        for (int i = 0; i < aliases.size(); i++) {
+            if (i > 0) sql.append(",");
+            sql.append("?");
+            params.add(aliases.get(i));
+        }
+        sql.append(") ");
+            sql.append("AND ID_COMIDA NOT IN (");
+                if (i > 0) sql.append(",");
+        JsonArray rows = query(c, sql.toString(), params.toArray());
+        if (rows.isEmpty()) return null;
+        Meal meal = MealAdapter.adaptAndDeserialize(rows.get(0).toString());
+        // La generación solo necesita valores nutricionales e ID fuente; los ingredientes se copian en SQL.
+        return meal;
+    public Meal getMealsByTypeAndCalories(int calories, String type) throws IOException {
+        if (calories <= 0) return null;
+        return db.read(c -> selectMeal(c, calories, type, Collections.emptySet()));
+    private Map<String, Object> dietData(int userId, int patientId, ValoresNutricionales values,
+                                         String restDay, int mealsPerDay, String note) {
+        String safeRestDay = restDay == null ? "" : restDay.toUpperCase(Locale.ROOT);
+                new Gson().toJson(new DietRequest(userId, patientId, values, safeRestDay, mealsPerDay, note)),
+                new com.google.gson.reflect.TypeToken<Map<String, Object>>() {}.getType());
+    public boolean sendDiet(int userId, int patientId, ValoresNutricionales values,
+                            String restDay, int mealsPerDay, String note) throws IOException {
+        return db.transaction(c -> DietRepository.insertDiet(c,
+                dietData(userId, patientId, values, restDay, mealsPerDay, note)) > 0);
+    private static int restDayNumber(String restDay) {
+        if (restDay == null || restDay.isBlank()) return -1;
+
+        String normalized = Normalizer.normalize(
+                restDay.trim().toUpperCase(Locale.ROOT),
+                Normalizer.Form.NFD
+        ).replaceAll("\\p{M}", "");
+
+        return switch (normalized) {
+            case "MONDAY", "LUNES" -> 1;
+            case "TUESDAY", "MARTES" -> 2;
+            case "WEDNESDAY", "MIERCOLES" -> 3;
+            case "THURSDAY", "JUEVES" -> 4;
+            case "FRIDAY", "VIERNES" -> 5;
+            case "SATURDAY", "SABADO" -> 6;
+            case "SUNDAY", "DOMINGO" -> 7;
+            default -> -1;
+        };
+    }
+public boolean createNewDiet(double calories, int mealsPerDay, String restDay,
+                                 int userId, int patientId, String note) {
+        if (!Double.isFinite(calories) || calories <= 0 || calories > 6000 ||
+                mealsPerDay < 1 || mealsPerDay > 6 || userId <= 0 || patientId <= 0) {
+                        DistribuidorDeCalorias.distribuir(calories, mealsPerDay);
+                List<LocalTime> times =
+                        DistribuidorDeCalorias.obtenerHoras(mealsPerDay);
+
+                ValoresNutricionales weeklyTotals = new ValoresNutricionales();
+                List<List<Meal>> mealsByDay = new ArrayList<>();
+                int restDayIndex = restDayNumber(restDay);
+                int activeDays = 0;
+                Set<Integer> usedAcrossWeek = new HashSet<>();
+
+                // Cada día obtiene una selección nueva. El día de descanso queda vacío.
+                // Se evita repetir una receta dentro del mismo día, pero puede reutilizarse
+                // en otro día si el catálogo de recetas es limitado.
+                for (int day = 1; day <= 7; day++) {
+                    List<Meal> selectedForDay = new ArrayList<>();
+
+                    if (day != restDayIndex) {
+                        activeDays++;
+                        Set<Integer> usedMealIds = new HashSet<>();
+
+                        for (ComidaProgramada scheduled : plan) {
+                            // Primero intenta usar una receta que no haya aparecido en días anteriores.
+                            Set<Integer> excludedForVariety = new HashSet<>(usedAcrossWeek);
+                            excludedForVariety.addAll(usedMealIds);
+
+                            Meal meal = selectMeal(
+                                    c,
+                                    scheduled.getCaloriasAsignadas(),
+                                    scheduled.getTipo(),
+                                    excludedForVariety
+                            );
+
+                            // Si el catálogo no tiene suficientes recetas distintas, permite
+                            // reutilizar una de otro día, pero nunca repetirla en el mismo día.
+                            if (meal == null) {
+                                meal = selectMeal(
+                                        scheduled.getCaloriasAsignadas(),
+                                        usedMealIds
+                            }
+                            if (meal == null) {
+                                throw new IOException(
+                                        "No hay una receta de tipo " + scheduled.getTipo()
+                                        + " con hasta " + Math.round(scheduled.getCaloriasAsignadas())
+                                        + " kcal. No se creó la dieta semanal."
+                            }
+                            selectedForDay.add(meal);
+                            usedMealIds.add(meal.getMealBaseId());
+                            usedAcrossWeek.add(meal.getMealBaseId());
+                            weeklyTotals.agregar(meal);
+                        }
+                    mealsByDay.add(selectedForDay);
+                }
+                if (activeDays == 0) {
+                    throw new IOException("La dieta debe tener al menos un día activo.");
+                }
+                ValoresNutricionales dailyAverage = new ValoresNutricionales();
+                dailyAverage.setCalories(weeklyTotals.getCalories() / activeDays);
+                dailyAverage.setFat(weeklyTotals.getFat() / activeDays);
+                dailyAverage.setCholesterol(weeklyTotals.getCholesterol() / activeDays);
+                dailyAverage.setSodium(weeklyTotals.getSodium() / activeDays);
+                dailyAverage.setCarbohydrates(weeklyTotals.getCarbohydrates() / activeDays);
+                dailyAverage.setProtein(weeklyTotals.getProtein() / activeDays);
+                dailyAverage.setCalcium(weeklyTotals.getCalcium() / activeDays);
+                dailyAverage.setIron(weeklyTotals.getIron() / activeDays);
+
+                int dietId = DietRepository.insertDiet(
+                        c,
+                        dietData(userId, patientId, dailyAverage, restDay, mealsPerDay, note)
+                );
+                for (int dayIndex = 0; dayIndex < mealsByDay.size(); dayIndex++) {
+                    List<Meal> mealsForDay = mealsByDay.get(dayIndex);
+                    for (int mealIndex = 0; mealIndex < mealsForDay.size(); mealIndex++) {
+                        DietRepository.copyMealToDiet(
+                                c,
+                                mealsForDay.get(mealIndex).getMealBaseId(),
+                                dietId,
+                                times.get(mealIndex),
+                                dayIndex + 1
+                        );
+            System.err.println("No se pudo crear la dieta: " + e.getMessage());
+}
+import com.google.gson.JsonArray;
+    private static final String SELECT_PATIENT = """
+        SELECT ID_PACIENTE AS patient_id, NOMBRE AS name, ALTURA AS height,
+               PESO AS weight, EDAD AS age
+        FROM PACIENTE
+        """;
+        return db.read(c -> items(query(c, SELECT_PATIENT + " ORDER BY ID_PACIENTE")));
+        return db.read(c -> one(query(c, SELECT_PATIENT + " WHERE ID_PACIENTE=?", id)));
+        return db.transaction(c -> {
+            int id = nextId(c, "PACIENTE", "ID_PACIENTE");
+            execute(c, "INSERT INTO PACIENTE (ID_PACIENTE,NOMBRE,EDAD,PESO,ALTURA) VALUES (?,?,?,?,?)",
+                    id, name, age, weight, height);
+            return id;
+        });
+            int changed = execute(c,
+                    "UPDATE PACIENTE SET NOMBRE=?,EDAD=?,PESO=?,ALTURA=? WHERE ID_PACIENTE=?",
+                    name, age, weight, height, id);
+            if (changed == 0) throw new IOException("No existe el paciente " + id);
+            return one(query(c, SELECT_PATIENT + " WHERE ID_PACIENTE=?", id));
+        return db.transaction(c -> {
+            // La eliminación de un paciente con dietas relacionadas puede estar bloqueada por claves foráneas.
+            int deleted = execute(c, "DELETE FROM PACIENTE WHERE ID_PACIENTE=?", id);
+            return "{\"deleted\":" + deleted + "}";
+        });
+        return db.read(c -> items(query(c,
+                "SELECT ID_USUARIO AS user_id, CORREO AS email FROM USUARIO ORDER BY ID_USUARIO")));
+            JsonArray rows = db.read(c -> query(c,
+                    "SELECT ID_USUARIO AS user_id FROM USUARIO WHERE CORREO=?", email));
+            JsonArray rows = db.read(c -> query(c,
+                    "SELECT PASSWORD AS password_hash FROM USUARIO WHERE CORREO=?", email));
+            if (rows.isEmpty() || rows.get(0).getAsJsonObject().get("password_hash").isJsonNull()) return false;
+            return BCrypt.checkpw(plainPassword, rows.get(0).getAsJsonObject().get("password_hash").getAsString());
+<AnchorPane prefHeight="176.0" prefWidth="410.0" style="-fx-background-color: #101d4f;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafx.nutrimaker.DialogController">
+      <HBox alignment="CENTER" prefHeight="99.0" prefWidth="410.0">            <Label fx:id="warningLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="78.0" prefWidth="383.0" text="Advertencia" textFill="WHITE" wrapText="true">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>   
+      <Button fx:id="closeButton" layoutX="171.0" layoutY="99.0" mnemonicParsing="false" onAction="#closeWindow" style="-fx-background-color: #0c7774;" text="Aceptar" textFill="WHITE">
+    public void dialog(String warningMessage) throws IOException {
+                            );                            // Si el catálogo no tiene suficientes recetas distintas, permite
