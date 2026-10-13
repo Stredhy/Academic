@@ -4,19 +4,19 @@ No realizado [ ❌ ]
 ______________________
 
 Seguridad de la Información e Infraestructura Tecnológica 
-[  ] - Resumen de Fundamentos de Redes y Criptografía Aplicada
+[ ❗ ] - Resumen de Fundamentos de Redes y Criptografía Aplicada
 
 Algoritmos Metaheurísticos 
 [  ] - 
 
 Métodos Numéricos
-[  ] - 
+[ ✅ ] - Apunte de "clase"
 
 Minería de Datos
 [  ] - 
 
 Internet de las Cosas
-[ ❗ ] - Actividad 6
+[ ❗ ] - Practica 2
 
 Calidad de Software
 [  ] - 

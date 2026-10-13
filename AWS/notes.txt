@@ -1,0 +1,12 @@
+IAM - sericios globales
+root/raíz - no de debe compartir 
+Usuaerios - personas dentro de la organización  que se pueden agrupar
+grupos - solo contienen usuarios no otros grupos 
+    * es usuario puede pertenecer a varios grupos
+
+IAM permisos
+los usuarios pueden asignar documentos JSON llamados políticas
+
+
+Practica 1:
+creando usuario IAM
