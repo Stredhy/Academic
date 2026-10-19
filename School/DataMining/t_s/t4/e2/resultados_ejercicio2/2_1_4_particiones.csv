@@ -1,0 +1,5 @@
+Conjunto,Class,Conteo,Porcentaje
+Training (80%),0,227451,99.82708
+Training (80%),1,394,0.17292
+Testing (20%),0,56864,99.82796
+Testing (20%),1,98,0.17204

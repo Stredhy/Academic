@@ -1,0 +1,7 @@
+4.4.2 - Interpretación de resultados
+ARI = 0.6687; NMI = 0.7138.
+ARI compara pares de observaciones corrigiendo por coincidencias al azar;
+NMI mide información compartida entre clusters y clases reales.
+Los clusters no son clases: K-means agrupa por similitud geométrica.
+Confusión: 1142 semillas BARBUNYA aparecen en el cluster 0, cuya variedad dominante es CALI.
+Confusión: 499 semillas DERMASON aparecen en el cluster 1, cuya variedad dominante es SIRA.

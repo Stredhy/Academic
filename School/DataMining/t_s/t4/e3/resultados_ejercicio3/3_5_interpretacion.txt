@@ -1,0 +1,10 @@
+3.5.1 Interpretación (comparaciones dentro de cada esquema):
+Train/Test: cambio al estratificar: accuracy -0.0065, F1 -0.0214, ROC-AUC -0.0118.
+Train/Validation/Test: cambio al estratificar: accuracy -0.0130, F1 -0.0926, ROC-AUC -0.0188.
+5-fold CV: cambio al estratificar: accuracy +0.0065, F1 +0.0245, ROC-AUC -0.0036.
+Nested 5x3 CV: cambio al estratificar: accuracy +0.0013, F1 -0.0034, ROC-AUC -0.0005.
+Los porcentajes de Outcome=1 por subconjunto se muestran en 3_2_2_composicion_subconjuntos.csv.
+Las desviaciones estándar reportadas corresponden al ROC-AUC entre folds externos.
+Testing es una evaluación final de un modelo; CV promedia distintas particiones y modelos entrenados.
+Las diferencias no se deben atribuir solo a estratificación: también intervienen el azar de la partición,
+el tamaño de entrenamiento y la selección de C; no se comparan test y CV como estimaciones equivalentes.

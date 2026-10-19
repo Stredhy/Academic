@@ -1,0 +1,7 @@
+Interpretación de resultados:
+En testing, el mayor ROC-AUC fue el de SVM RBF (0.9945).
+Las diferencias entre C y gamma en la tabla CV muestran la sensibilidad del ajuste y su capacidad de generalización.
+Las importancias por permutación se calcularon sobre validation, no sobre testing.
+PCA sirve solo para representar los datos en dos dimensiones; los clasificadores fueron entrenados con las 30 variables.
+Class=1 es la clase positiva usada en precision, recall, F1 y ROC-AUC.
+Como el archivo no incluye nombres descriptivos, las importancias se identifican por posición de columna y no por concepto clínico o web.

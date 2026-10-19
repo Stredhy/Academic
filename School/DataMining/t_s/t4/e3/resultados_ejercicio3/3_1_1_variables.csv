@@ -1,0 +1,9 @@
+Variable,Tipo,Mínimo,Máximo,Número de ceros
+Pregnancies,int64,0.0,17.0,111
+Glucose,int64,0.0,199.0,5
+BloodPressure,int64,0.0,122.0,35
+SkinThickness,int64,0.0,99.0,227
+Insulin,int64,0.0,846.0,374
+BMI,float64,0.0,67.1,11
+DiabetesPedigreeFunction,float64,0.078,2.42,0
+Age,int64,21.0,81.0,0

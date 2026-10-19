@@ -1,22 +1,25 @@
 Finalizado [ ✅ ]
+En progreso [ ⏳ ]
 Pendiente [ ❗ ]
-No realizado [ ❌ ]   
+No realizado [ ❌ ]
+Prioridad [ ❗🔴❗ ]   
 ______________________
 
 Seguridad de la Información e Infraestructura Tecnológica 
 [ ❗ ] - Resumen de Fundamentos de Redes y Criptografía Aplicada
-
+-
 Algoritmos Metaheurísticos 
 [  ] - 
 
 Métodos Numéricos
-[ ✅ ] - Apunte de "clase"
+[ ✅ ] - Interpolación Tarea
 
 Minería de Datos
-[  ] - 
+[ ❗ ] - Tarea 5 - Docker
+[ ⏳ ] - Tarea 4 - Aprendizaje supervisado y no supervisado
 
 Internet de las Cosas
-[ ❗ ] - Practica 2
+[ ❗ ] - Practica 3
 
 Calidad de Software
-[  ] - 
+[ ❗ ] - P02 - SWTP & Test Results

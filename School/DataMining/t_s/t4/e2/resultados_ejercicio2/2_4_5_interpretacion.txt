@@ -1,0 +1,7 @@
+Mayor recall: RandomUnderSampler (91.8367%).
+Falsos positivos: 2036.
+Falsos negativos: 8.
+Precision: 4.2333%.
+Interpretación: mayor recall implica detectar más fraudes, pero debe contrastarse con las alertas falsas (FP) y precision.
+PR-AUC se reporta como Average Precision (AP), especialmente informativa cuando la clase positiva es muy minoritaria.
+Las figuras PCA muestran una muestra para legibilidad, con los conteos reales indicados en las leyendas.

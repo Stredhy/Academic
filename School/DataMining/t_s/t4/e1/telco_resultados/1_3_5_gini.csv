@@ -1,0 +1,11 @@
+﻿variable,importancia_gini
+num__TotalCharges,0.15784422149582575
+num__tenure,0.1370129813682001
+num__MonthlyCharges,0.13554900017418367
+cat__Contract_Month-to-month,0.05026301886049813
+cat__OnlineSecurity_No,0.03193859864458574
+cat__PaymentMethod_Electronic check,0.029028490172813854
+cat__TechSupport_No,0.028014302422948747
+cat__InternetService_Fiber optic,0.0241343606129849
+cat__gender_Female,0.018217671217944258
+cat__gender_Male,0.017947025119850545

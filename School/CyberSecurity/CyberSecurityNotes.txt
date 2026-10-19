@@ -131,4 +131,11 @@ Tiene siete capas
 [ Practica Kali, metasploit, w2k3 ]
 192.168.147.130 - linux
  y
- 192.168.147.131 - windows
+ 192.168.147.131 - Windows
+
+
+NIST - pagina para saber que tipo de vulnerabilidades existen
+
+
+[ Comandos de nmap ]
+

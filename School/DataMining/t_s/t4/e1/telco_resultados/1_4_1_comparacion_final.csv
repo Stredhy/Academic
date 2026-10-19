@@ -1,0 +1,7 @@
+﻿algoritmo,mejores_hiperparametros,accuracy,precision,recall,F1,ROC_AUC
+KNN,"{""model__n_neighbors"": 15}",0.78211,0.59544,0.55882,0.57655,0.82246
+Logistica,"{""model__C"": 10}",0.80554,0.65723,0.55882,0.60405,0.84109
+NaiveBayes,"{""model__var_smoothing"": 1e-09}",0.69553,0.45974,0.83957,0.59413,0.8075
+Arbol,"{""model__max_depth"": 5}",0.79844,0.63473,0.56684,0.59887,0.83028
+RandomForest,"{""model__n_estimators"": 300}",0.78141,0.61301,0.47861,0.53754,0.81874
+SVM,"{""model__C"": 0.1, ""model__kernel"": ""linear""}",0.7885,0.61875,0.52941,0.57061,0.82663

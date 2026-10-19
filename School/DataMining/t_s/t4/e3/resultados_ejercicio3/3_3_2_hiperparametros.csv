@@ -1,0 +1,13 @@
+Estratificación,Esquema,C seleccionado,ROC-AUC validation,gamma seleccionado
+No,Train/Validation/Test,1.0,0.8389688025406313,
+No,Nested outer fold 1,0.1,0.8341597796143251,scale
+No,Nested outer fold 2,0.1,0.8184529727580037,scale
+No,Nested outer fold 3,0.1,0.820906046183677,scale
+No,Nested outer fold 4,1.0,0.828181453231634,scale
+No,Nested outer fold 5,1.0,0.837568058076225,scale
+Sí,Train/Validation/Test,0.1,0.865,
+Sí,Nested outer fold 1,0.1,0.834074074074074,scale
+Sí,Nested outer fold 2,1.0,0.8422222222222222,scale
+Sí,Nested outer fold 3,0.1,0.836851851851852,scale
+Sí,Nested outer fold 4,0.1,0.8226415094339623,scale
+Sí,Nested outer fold 5,0.1,0.8009433962264151,scale

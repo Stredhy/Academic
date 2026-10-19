@@ -1,0 +1,94 @@
+|--- cat__Contract_Month-to-month <= 0.50
+|   |--- num__MonthlyCharges <= 0.95
+|   |   |--- cat__OnlineSecurity_No <= 0.50
+|   |   |   |--- cat__Contract_One year <= 0.50
+|   |   |   |   |--- cat__OnlineBackup_No <= 0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- cat__OnlineBackup_No >  0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- cat__Contract_One year >  0.50
+|   |   |   |   |--- num__MonthlyCharges <= 0.24
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- num__MonthlyCharges >  0.24
+|   |   |   |   |   |--- class: 0
+|   |   |--- cat__OnlineSecurity_No >  0.50
+|   |   |   |--- cat__Contract_Two year <= 0.50
+|   |   |   |   |--- cat__PaymentMethod_Mailed check <= 0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- cat__PaymentMethod_Mailed check >  0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- cat__Contract_Two year >  0.50
+|   |   |   |   |--- num__MonthlyCharges <= -0.35
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- num__MonthlyCharges >  -0.35
+|   |   |   |   |   |--- class: 0
+|   |--- num__MonthlyCharges >  0.95
+|   |   |--- cat__Contract_Two year <= 0.50
+|   |   |   |--- num__TotalCharges <= 2.53
+|   |   |   |   |--- num__tenure <= 1.55
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- num__tenure >  1.55
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- num__TotalCharges >  2.53
+|   |   |   |   |--- cat__Partner_Yes <= 0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- cat__Partner_Yes >  0.50
+|   |   |   |   |   |--- class: 1
+|   |   |--- cat__Contract_Two year >  0.50
+|   |   |   |--- num__MonthlyCharges <= 0.96
+|   |   |   |   |--- cat__SeniorCitizen_0 <= 0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- cat__SeniorCitizen_0 >  0.50
+|   |   |   |   |   |--- class: 1
+|   |   |   |--- num__MonthlyCharges >  0.96
+|   |   |   |   |--- num__TotalCharges <= 2.39
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- num__TotalCharges >  2.39
+|   |   |   |   |   |--- class: 0
+|--- cat__Contract_Month-to-month >  0.50
+|   |--- cat__InternetService_Fiber optic <= 0.50
+|   |   |--- num__tenure <= -1.18
+|   |   |   |--- cat__TechSupport_No <= 0.50
+|   |   |   |   |--- num__TotalCharges <= -1.00
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- num__TotalCharges >  -1.00
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- cat__TechSupport_No >  0.50
+|   |   |   |   |--- cat__SeniorCitizen_0 <= 0.50
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- cat__SeniorCitizen_0 >  0.50
+|   |   |   |   |   |--- class: 1
+|   |   |--- num__tenure >  -1.18
+|   |   |   |--- cat__PaymentMethod_Electronic check <= 0.50
+|   |   |   |   |--- cat__OnlineSecurity_No <= 0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- cat__OnlineSecurity_No >  0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- cat__PaymentMethod_Electronic check >  0.50
+|   |   |   |   |--- cat__OnlineBackup_No <= 0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- cat__OnlineBackup_No >  0.50
+|   |   |   |   |   |--- class: 0
+|   |--- cat__InternetService_Fiber optic >  0.50
+|   |   |--- num__tenure <= -0.77
+|   |   |   |--- num__TotalCharges <= -0.96
+|   |   |   |   |--- cat__TechSupport_Yes <= 0.50
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- cat__TechSupport_Yes >  0.50
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- num__TotalCharges >  -0.96
+|   |   |   |   |--- num__MonthlyCharges <= 0.44
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- num__MonthlyCharges >  0.44
+|   |   |   |   |   |--- class: 1
+|   |   |--- num__tenure >  -0.77
+|   |   |   |--- cat__PaymentMethod_Electronic check <= 0.50
+|   |   |   |   |--- num__tenure <= 0.77
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- num__tenure >  0.77
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- cat__PaymentMethod_Electronic check >  0.50
+|   |   |   |   |--- num__TotalCharges <= 0.34
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- num__TotalCharges >  0.34
+|   |   |   |   |   |--- class: 0

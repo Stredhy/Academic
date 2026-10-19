@@ -1,0 +1,9 @@
+# No copiar la imagen exportada.
+python-script.tar
+
+# No copiar archivos temporales de Python.
+__pycache__/
+*.pyc
+
+# No copiar el historial de Git.
+.git/

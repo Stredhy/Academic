@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "nodes": 1912,
+    "edges": 31299,
+    "components": 1,
+    "density": 0.017132150575067492,
+    "avg_degree": 32.73953974895397,
+    "avg_clustering": 0.31989527466935147,
+    "diameter": 7,
+    "mature0": 1251,
+    "mature1": 661,
+    "train": 1529,
+    "test": 383,
+    "split_seed": 42,
+    "max_finite_distance": 7.0,
+    "infinite_distances": 0,
+    "distance_imputation": 8.0
+  },
+  "results": {
+    "Modelo A — Adyacencia": {
+      "accuracy": 0.6736292428198434,
+      "f1": 0.4444444444444444,
+      "confusion_matrix": [
+        [
+          208,
+          43
+        ],
+        [
+          82,
+          50
+        ]
+      ],
+      "report": {
+        "mature=0": {
+          "precision": 0.7172413793103448,
+          "recall": 0.8286852589641435,
+          "f1-score": 0.7689463955637708,
+          "support": 251.0
+        },
+        "mature=1": {
+          "precision": 0.5376344086021505,
+          "recall": 0.3787878787878788,
+          "f1-score": 0.4444444444444444,
+          "support": 132.0
+        },
+        "accuracy": 0.6736292428198434,
+        "macro avg": {
+          "precision": 0.6274378939562477,
+          "recall": 0.6037365688760111,
+          "f1-score": 0.6066954200041076,
+          "support": 383.0
+        },
+        "weighted avg": {
+          "precision": 0.6553402823560847,
+          "recall": 0.6736292428198434,
+          "f1-score": 0.6571076030108959,
+          "support": 383.0
+        }
+      }
+    },
+    "Modelo B — Distancias": {
+      "accuracy": 0.6762402088772846,
+      "f1": 0.3541666666666667,
+      "confusion_matrix": [
+        [
+          225,
+          26
+        ],
+        [
+          98,
+          34
+        ]
+      ],
+      "report": {
+        "mature=0": {
+          "precision": 0.6965944272445821,
+          "recall": 0.896414342629482,
+          "f1-score": 0.7839721254355401,
+          "support": 251.0
+        },
+        "mature=1": {
+          "precision": 0.5666666666666667,
+          "recall": 0.25757575757575757,
+          "f1-score": 0.3541666666666667,
+          "support": 132.0
+        },
+        "accuracy": 0.6762402088772846,
+        "macro avg": {
+          "precision": 0.6316305469556244,
+          "recall": 0.5769950501026198,
+          "f1-score": 0.5690693960511034,
+          "support": 383.0
+        },
+        "weighted avg": {
+          "precision": 0.6518151468365276,
+          "recall": 0.6762402088772846,
+          "f1-score": 0.6358407401679388,
+          "support": 383.0
+        }
+      }
+    }
+  }
+}

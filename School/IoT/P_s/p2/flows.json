@@ -1,0 +1,99 @@
+[
+    {
+        "id": "cd3566b28c08eb81",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "edb379a376c994c6",
+        "type": "mqtt in",
+        "z": "cd3566b28c08eb81",
+        "name": "Recibir temperaturas",
+        "topic": "practica/esp32/sensor",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "8e7cf5f6b06e09aa",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "40b7b1b995ee1281"
+            ]
+        ]
+    },
+    {
+        "id": "8ba7e946245dd1df",
+        "type": "debug",
+        "z": "cd3566b28c08eb81",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "40b7b1b995ee1281",
+        "type": "function",
+        "z": "cd3566b28c08eb81",
+        "name": "Procesar datos",
+        "func": "\nlet datos = msg.payload;\n\n// Convertir el mensaje a un objeto\nif (typeof datos === \"string\") {\n    datos = JSON.parse(datos);\n}\n\n// Preparar la información\nmsg.payload = {\n    temperatura: datos.temperatura,\n    estadoLED: datos.led === 1 ? \"Encendido\" : \"Apagado\"\n};\n\n// Enviar el resultado al siguiente bloque\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 600,
+        "wires": [
+            [
+                "8ba7e946245dd1df"
+            ]
+        ]
+    },
+    {
+        "id": "8e7cf5f6b06e09aa",
+        "type": "mqtt-broker",
+        "name": "MQTT-ESP32",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

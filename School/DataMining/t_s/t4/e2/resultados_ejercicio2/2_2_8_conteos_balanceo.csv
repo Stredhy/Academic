@@ -1,0 +1,6 @@
+Estrategia,Antes_Class_0,Antes_Class_1,Despues_Class_0,Despues_Class_1,Observacion
+Sin balanceo,227451,394,227451,394,Conjunto usado para entrenar
+RandomUnderSampler,227451,394,394,394,Conjunto usado para entrenar
+RandomOverSampler,227451,394,227451,227451,Conjunto usado para entrenar
+SMOTE,227451,394,227451,227451,Conjunto usado para entrenar
+BalancedRandomForest,227451,394,227451,394,Balanceo interno por árbol
