@@ -12,7 +12,7 @@ Algoritmos Metaheurísticos
 [  ] - 
 
 Métodos Numéricos
-[ ✅ ] - Interpolación Tarea
+[  ] - 
 
 Minería de Datos
 [ ❗ ] - Tarea 5 - Docker
