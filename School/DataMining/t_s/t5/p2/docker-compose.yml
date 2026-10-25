@@ -1,0 +1,75 @@
+# Aquí definimos los contenedores/servicios que forman nuestra aplicación.
+services:
+
+  # Servicio de base de datos.
+  # El nombre "db" también funcionará como hostname
+  # dentro de la red creada por Docker Compose.
+  db:
+
+    # Usamos una imagen de MySQL ya construida.
+    image: mysql:5.7
+
+    # Variables de entorno que recibe el contenedor de MySQL.
+    environment:
+
+      # Contraseña del usuario root de MySQL.
+      MYSQL_ROOT_PASSWORD: example
+
+      # Base de datos que MySQL creará inicialmente.
+      MYSQL_DATABASE: test_db
+
+    # Almacenamiento y archivos que montamos en el contenedor.
+    volumes:
+
+      # Volumen persistente.
+      # Los datos físicos de MySQL se guardarán aquí.
+      #
+      # db_data                 → volumen de Docker
+      # /var/lib/mysql         → carpeta dentro del contenedor
+      - db_data:/var/lib/mysql
+
+      # Montamos nuestro init.sql dentro del contenedor.
+      #
+      # ./init.sql             → archivo de nuestro proyecto
+      # /docker-entrypoint...  → ubicación dentro del contenedor
+      # :ro                    → read only
+      #
+      # MySQL ejecutará este script durante
+      # la inicialización de la base de datos.
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+
+  # Servicio de nuestra aplicación web Flask.
+  web:
+
+    # Construye la imagen usando el Dockerfile
+    # que se encuentra en el directorio actual (.).
+    build: .
+
+    # Mapeo de puertos:
+    #
+    # 5000 de nuestra computadora
+    #           ↓
+    # 5000 del contenedor
+    ports:
+      - "5000:5000"
+
+    # Indica que el servicio db debe iniciarse
+    # antes que el servicio web.
+    depends_on:
+      - db
+
+    # Montamos nuestro proyecto dentro de /app.
+    #
+    # .       → carpeta actual de nuestra computadora
+    # /app    → carpeta dentro del contenedor
+    volumes:
+      - .:/app
+
+
+# Aquí declaramos los volúmenes administrados por Docker.
+volumes:
+
+  # Este es el volumen que usamos arriba
+  # para almacenar persistentemente los datos de MySQL.
+  db_data:

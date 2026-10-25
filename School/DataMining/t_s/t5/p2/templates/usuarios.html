@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+
+    <!--
+    Le pedimos a Flask la URL del archivo
+    estilo.css que está dentro de static/.
+    -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='estilo.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <h1>Usuarios almacenados en MySQL</h1>
+
+    <ul>
+
+        <!--
+        "usuarios" viene desde app.py:
+
+        render_template(
+            "usuarios.html",
+            usuarios=resultados
+        )
+        -->
+
+        {% for nombre, edad in usuarios %}
+
+            <li>
+                {{ nombre }} - {{ edad }} años
+            </li>
+
+        {% endfor %}
+
+    </ul>
+
+</body>
+
+</html>
