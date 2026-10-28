@@ -134,7 +134,7 @@ Tiene siete capas
  192.168.147.131 - Windows
 
 
-NIST - pagina para saber que tipo de vulnerabilidades existen
+NIST - pagina para saber que tipo de vulnerabilidades tiene un sitio
 
 
 [ Comandos de nmap ]

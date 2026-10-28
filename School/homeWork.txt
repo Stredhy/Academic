@@ -12,14 +12,14 @@ Algoritmos Metaheurísticos
 [  ] - 
 
 Métodos Numéricos
-[ ❗ ] - Tarea: Mínimos cuadrados y diferencias finitas
-
+[ ✅ ] - Tarea: Mínimos cuadrados y diferencias finitas
+| 
 Minería de Datos
 [ ⏳ ] - Tarea 5 - Docker
 [ ⏳ ] - Tarea 4 - Aprendizaje supervisado y no supervisado
 
 Internet de las Cosas
-[ ✅ ] - Practica 3
+[ ❗ ] - Practica 4
 
 Calidad de Software
 [ ❗ ] - P02 - SWTP & Test Results
