@@ -1,0 +1,4 @@
+arquitectura,capas,parametros,batch_size,epocas_maximas,activacion_oculta,salida
+[8],8 -> 8 -> 1,81,32,60,ReLU,Sigmoide
+"[16,8]",8 -> 16 -> 8 -> 1,289,32,60,ReLU,Sigmoide
+"[32,16,8]",8 -> 32 -> 16 -> 8 -> 1,961,32,60,ReLU,Sigmoide

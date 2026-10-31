@@ -1,0 +1,4 @@
+ejemplo,indice_original,clase,mse_individual
+error_bajo,348,B,0.0014346656521180248
+error_intermedio,259,B,0.008315658987204622
+error_alto,20,B,0.1768837981961255

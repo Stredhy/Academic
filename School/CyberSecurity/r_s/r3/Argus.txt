@@ -1,0 +1,74 @@
+# Iniciar con la consola ROOT de Kali
+
+cd /home/kali
+python3 -m venv argus-env
+source argus-env/bin/activate
+git clone https://github.com/jasonxtn/argus.git
+cd argus
+pip install -r requirements.txt
+
+# Copiar y pegar este código completo en la consola
+------------------------------------------------------
+
+python - <<'PY'
+from pathlib import Path
+
+directory = Path("argus/cli/commands")
+changed = []
+
+for path in directory.glob("*.py"):
+    source = path.read_text()
+
+    if "argparse.ArgumentParser" not in source:
+        continue
+
+    source = source.replace(
+        "argparse.ArgumentParser",
+        "cmd2.Cmd2ArgumentParser"
+    )
+
+    if "import cmd2" not in source:
+        lines = source.splitlines(keepends=True)
+        insert_at = 0
+
+        for i, line in enumerate(lines):
+            if line.startswith("from __future__ import "):
+                insert_at = i + 1
+            elif line.strip() and not line.lstrip().startswith("#"):
+                break
+
+        lines.insert(insert_at, "import cmd2\n")
+        source = "".join(lines)
+
+    path.write_text(source)
+    changed.append(str(path))
+
+print("Archivos modificados:")
+for path in changed:
+    print(f"  {path}")
+
+if not changed:
+    print("No se encontraron archivos que modificar.")
+PY
+
+------------------------------------------------------
+
+python3 -m argus
+set target dominio.com
+modules
+run 1
+run 2
+run 3
+run 4
+run 5
+run 8
+run 9 80
+run 9 100
+run 10
+run 12
+run 18
+run 19
+run 32
+run 54
+run 100
+run 124

@@ -1,0 +1,3 @@
+metodo,interpretabilidad_ejes,estructura,distancias
+PCA,Alta: combinaciones lineales y loadings,Maximiza varianza global proyectada,Distancias proyectadas en escala lineal; hay pérdida de información
+t-SNE,Baja: ejes sin significado físico directo,Prioriza vecindades locales,No interpretar distancias globales ni tamaños de grupos como PCA

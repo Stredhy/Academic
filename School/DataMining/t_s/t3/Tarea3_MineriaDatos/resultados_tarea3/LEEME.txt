@@ -1,8 +1,0 @@
-TAREA 3 - MINERÍA DE DATOS
-Customer Personality Analysis
-
-Filas: 2240
-Columnas: 29
-
-Los resultados completos se encuentran en reporte_tarea3.md
-y en las tablas CSV dentro de la carpeta resultados_tarea3.

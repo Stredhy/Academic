@@ -1,0 +1,6 @@
+PassengerId,Age_original,Age_Media,Age_Mediana,Age_KNN k=2,Age_KNN k=5,Age_KNN k=10,Age_eliminar_columna
+693,,29.81,28.5,30.0,31.4,27.95,No disponible (columna excluida)
+482,,29.81,28.5,42.5,32.4,30.7,No disponible (columna excluida)
+528,,29.81,28.5,40.0,31.2,35.0,No disponible (columna excluida)
+558,,29.81,28.5,40.0,31.2,35.0,No disponible (columna excluida)
+829,,29.81,28.5,67.75,47.5,39.3,No disponible (columna excluida)

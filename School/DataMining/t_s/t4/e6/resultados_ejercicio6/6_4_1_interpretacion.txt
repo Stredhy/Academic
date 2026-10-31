@@ -1,0 +1,13 @@
+Comparación de tres representaciones de texto con Naive Bayes
+         Representación  Vocabulario Matriz training Matriz testing  Accuracy  F1 macro  F1 weighted
+Conteos + MultinomialNB        26686   (1780, 26686)   (445, 26686)    0.9798    0.9795       0.9798
+ TF-IDF + MultinomialNB        26686   (1780, 26686)   (445, 26686)    0.9685    0.9676       0.9685
+  Binaria + BernoulliNB        26686   (1780, 26686)   (445, 26686)    0.9438    0.9444       0.9440
+
+La mejor representación por F1 macro fue Conteos + MultinomialNB.
+Accuracy mide aciertos globales y F1 macro promedia el F1 de las cinco categorías sin ponderarlas por frecuencia.
+Los diez términos por clase son los de mayor probabilidad condicional estimada por cada Naive Bayes.
+Errores concretos del mejor modelo:
+Real: sport | Predicha: politics | Texto:  Former Scotland international Finlay Calder fears civil war at the SRU could seriously hamper his country's RBS Six Nations campaign.  Four members of the executive board, including the chairman, David Mackay, have resigned after a simmering row. And Calder said: "This is terrible news for every le
+Real: business | Predicha: politics | Texto:  Charlie Bell, the straight-talking former head of fast-food giant McDonald's, has died of cancer aged 44.  Mr Bell was diagnosed with colorectal cancer in May last year, a month after taking over the top job. He resigned in November to fight the illness. Joining the company as a 15-year-old part-ti
+Estos errores pueden reflejar vocabulario compartido entre categorías o contexto que el modelo no capta.

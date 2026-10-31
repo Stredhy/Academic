@@ -1,0 +1,6 @@
+﻿representacion,filas,columnas,nodos_sin_vecinos,tratamiento_aislados
+Atributos propios (proxy grado),7624,1,0,promedio vecino=0; métricas estructurales según NetworkX
+Adyacencia,7624,7624,0,promedio vecino=0; métricas estructurales según NetworkX
+Cinco metricas topologicas,7624,5,0,promedio vecino=0; métricas estructurales según NetworkX
+Promedio de vecinos (grado),7624,1,0,promedio vecino=0; métricas estructurales según NetworkX
+Propios + metricas,7624,6,0,promedio vecino=0; métricas estructurales según NetworkX

@@ -1,0 +1,4 @@
+﻿Representación,Vocabulario,Matriz training,Matriz testing,Accuracy,F1 macro,F1 weighted
+Conteos + MultinomialNB,26686,"(1780, 26686)","(445, 26686)",0.97978,0.97946,0.97982
+TF-IDF + MultinomialNB,26686,"(1780, 26686)","(445, 26686)",0.96854,0.96765,0.96854
+Binaria + BernoulliNB,26686,"(1780, 26686)","(445, 26686)",0.94382,0.94441,0.94402

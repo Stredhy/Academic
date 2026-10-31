@@ -1,0 +1,9 @@
+Ejercicio 11 — Interpretación de resultados reales
+
+Diseño: train/test estratificado 80/20 (semilla 42). Cada imputador, escalador y codificador se ajusta exclusivamente con training. En CV, se ajusta de nuevo dentro de cada fold. Clasificador fijo: LogisticRegression(C=1, max_iter=2000, solver=lbfgs).
+
+Comparación 1: Eliminar columnas con NaN elimina Age y Embarked, y produce 6 columnas codificadas, frente a 10 con imputación por mediana. La accuracy en test cambia de 0.8101 a 0.8045; la diferencia refleja tanto la imputación como la disponibilidad de variables.
+
+Comparación 2: El KNN elegido mediante CV es KNN k=10 (ROC-AUC CV=0.8549 ± 0.0274), con F1 en test=0.7442; la mediana alcanza F1=0.7244. KNN estima Age a partir de vecinos en variables numéricas escaladas, mientras la mediana asigna el mismo valor a todas las edades faltantes.
+
+Selección de estrategia final por CV: Media. Las 891 filas son utilizables porque no se eliminan observaciones; el método de eliminación retira columnas. Cabin se excluye en todos los métodos por su elevada proporción de NaN; PassengerId, Name y Ticket se excluyen como identificadores/texto de alta cardinalidad.

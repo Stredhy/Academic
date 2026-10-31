@@ -1,0 +1,10 @@
+columna,tipo,NaN_original,filas_dataset,variables_predictoras,variable_objetivo
+Pregnancies,int64,0,768,8,Outcome
+Glucose,int64,0,768,8,Outcome
+BloodPressure,int64,0,768,8,Outcome
+SkinThickness,int64,0,768,8,Outcome
+Insulin,int64,0,768,8,Outcome
+BMI,float64,0,768,8,Outcome
+DiabetesPedigreeFunction,float64,0,768,8,Outcome
+Age,int64,0,768,8,Outcome
+Outcome,int64,0,768,8,Outcome

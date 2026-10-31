@@ -6,20 +6,23 @@ Prioridad [ ❗🔴❗ ]
 ______________________
 
 Seguridad de la Información e Infraestructura Tecnológica 
-[ ✅ ] - Resumen de Fundamentos de Redes y Criptografía Aplicada
+[ ✅ ] - Resumen de Reconocimiento y Escaneo de la Infraestructura
 
 Algoritmos Metaheurísticos 
-[  ] - 
+[ ❗ ] - Algoritmo ACO
 
 Métodos Numéricos
-[ ✅ ] - Tarea: Mínimos cuadrados y diferencias finitas
-| 
+[ ❗ ] - Tarea integración numérica
+
 Minería de Datos
-[ ⏳ ] - Tarea 5 - Docker
+[ ✅ ] - Tarea 6 - Git y DVC
+[ ✅ ] - Tarea 5 - Docker
 [ ⏳ ] - Tarea 4 - Aprendizaje supervisado y no supervisado
+[ ❗🔴❗ ] - Proyecto - Introducción a MLOps: Desarrollo, Versionado y Automatización de Modelos de Machine Learning
+
 
 Internet de las Cosas
-[ ❗ ] - Practica 4
+[ ✅ ] - Practica 4
 
 Calidad de Software
 [ ❗ ] - P02 - SWTP & Test Results

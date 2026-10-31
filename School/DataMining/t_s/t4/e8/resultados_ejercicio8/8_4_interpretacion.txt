@@ -1,0 +1,7 @@
+Interpretación de resultados
+Mayor ARI: complete (0.9495); mide correspondencia con las clases reales, ajustada por azar.
+Mayor silhouette: average (0.5146); mide separación interna usando distancias Jaccard.
+NMI mide información compartida entre clusters y clases, independientemente del número asignado a cada grupo.
+Single puede formar cadenas; complete favorece grupos compactos; average utiliza la distancia media entre grupos.
+Las clases reales no se usaron para entrenar ni cortar los dendrogramas.
+Las posiciones horizontales de las hojas no son necesariamente idénticas entre métodos, aunque se proporcionaron las mismas etiquetas.

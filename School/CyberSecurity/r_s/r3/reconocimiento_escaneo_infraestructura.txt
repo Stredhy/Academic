@@ -1,0 +1,118 @@
+RECONOCIMIENTO Y ESCANEO DE LA INFRAESTRUCTURA
+Comandos seleccionados del historial (sin duplicados)
+
+NOTA: <IP>, <RED/CIDR> y <DOMINIO> son marcadores. Ejecutar únicamente en sistemas autorizados.
+Se han corregido errores evidentes de escritura y se han omitido comandos repetidos.
+
+1. RECONOCIMIENTO LOCAL Y DNS
+ip a
+  Muestra interfaces y direcciones IP locales.
+ip address
+  Equivalente extendido para consultar direcciones de red.
+nslookup <DOMINIO>
+  Consulta registros DNS (en el historial se ejecutó sin argumento).
+
+2. DESCUBRIMIENTO DE EQUIPOS Y RUTAS
+nmap -sn <RED/CIDR>
+  Descubre hosts activos sin escanear puertos (-sP es la sintaxis antigua).
+nmap -PR <RED/CIDR>
+  Utiliza descubrimiento ARP en redes locales IPv4.
+nmap -sn -PS <IP>
+  Descubrimiento mediante sondas TCP SYN.
+nmap -sn -PY <IP>
+  Descubrimiento mediante sondas SCTP INIT.
+nmap -sn -PM <IP>
+  Descubrimiento mediante ICMP address mask (puede ser filtrado).
+nmap -sn -PU53 <IP>
+  Descubrimiento mediante sonda UDP al puerto 53 (corregida la IP con comas).
+nmap -sn --traceroute <DOMINIO>
+  Descubre la ruta de red hacia el objetivo.
+nmap -6 <DOMINIO>
+  Explora un objetivo mediante IPv6.
+
+3. ESCANEO DE PUERTOS Y SERVICIOS
+nmap <IP>
+  Escaneo TCP predeterminado de puertos comunes.
+nmap <RED/CIDR>
+  Escaneo de los hosts de un segmento de red.
+nmap -p 1-500 <IP>
+  Examina puertos TCP del 1 al 500.
+nmap -p 139 <IP>
+  Examina un puerto TCP específico (NetBIOS).
+nmap -p 135 <IP>
+  Examina el puerto TCP 135 (RPC).
+nmap -p ssh <IP>
+  Examina el puerto asociado al servicio SSH.
+nmap -sS -p 100-500 <IP> --exclude-ports 139
+  Escaneo SYN, excluyendo el puerto 139.
+nmap -sS -p 100-500 <IP>
+  Escaneo TCP SYN en un rango de puertos.
+nmap -sU -p 161 <IP>
+  Examina UDP 161 (habitualmente SNMP).
+nmap -sV <IP>
+  Identifica servicios y versiones.
+nmap -sV --version-trace <IP>
+  Detalla las sondas utilizadas para detectar versiones.
+nmap -O <IP>
+  Estima el sistema operativo remoto.
+nmap -O -v <IP>
+  Estima el sistema operativo con salida detallada.
+
+4. ENUMERACIÓN DE INFRAESTRUCTURA Y SERVICIOS
+nmap --script smb-os-discovery.nse <IP>
+  Obtiene información del sistema a través de SMB.
+nmap --script smb-enum-shares.nse -p 445 <IP>
+  Enumera recursos compartidos SMB.
+nmap --script smb-enum-users.nse <IP>
+  Intenta enumerar usuarios SMB.
+nmap --script smb-security-mode <IP>
+  Consulta la configuración de seguridad SMB.
+nmap -f --script "mysql-*" -p 3306 <IP>
+  Ejecuta scripts de reconocimiento y otras comprobaciones de MySQL; algunos scripts pueden ser intrusivos.
+nmap -f --script safe <IP>
+  Ejecuta scripts clasificados como safe, con fragmentación de paquetes.
+nmap -f -sV -sS --script auth <IP>
+  Identifica servicios y ejecuta scripts de autenticación; algunos pueden ser intrusivos.
+
+5. FORMATOS DE RESULTADOS Y OPCIONES DE SONDEO
+nmap -p 1-500 <IP> -oN output.txt
+  Guarda resultados en formato de texto normal.
+nmap -p 1-500 <IP> -oX output.xml
+  Guarda resultados en formato XML.
+nmap -f <IP>
+  Escanea con fragmentación de paquetes IPv4.
+nmap -g 80 <IP>
+  Configura el puerto de origen de las sondas en 80.
+nmap --mtu 8 <IP>
+  Ajusta el tamaño de fragmentos IPv4 (MTU múltiplo de 8).
+nmap --data-length 5 <IP>
+  Añade cinco bytes de datos aleatorios a las sondas.
+
+6. RECONOCIMIENTO WEB Y HERRAMIENTAS
+recon-ng
+  Abre el framework de reconocimiento de fuentes abiertas.
+wget http://<DOMINIO>/robots.txt
+  Descarga el archivo robots.txt del sitio (si existe).
+cat robots.txt
+  Muestra el contenido del archivo descargado.
+telnet <IP> 445
+  Comprueba manualmente la conectividad TCP al puerto 445.
+telnet <IP> 6200
+  Comprueba manualmente la conectividad TCP al puerto 6200.
+telnet <IP> 80
+  Comprueba manualmente la conectividad TCP al puerto 80.
+
+FUERA DEL ALCANCE PRINCIPAL
+No se incluyen smb-brute (fuerza bruta), --script vuln o http-malware-host (evaluación de vulnerabilidades), ni comandos de criptografía, instalación, mantenimiento, limpieza o apagado. Tampoco se incluyen entradas mal formadas sin una corrección inequívoca.
+
+7. HERRAMIENTAS ADICIONALES (SEGUNDO HISTORIAL)
+python3 -m argus
+  Inicia Argus, una herramienta de seguridad con funciones de reconocimiento y análisis.
+  Nota: este comando solo abre la herramienta; el historial no muestra módulos
+  ni escaneos concretos ejecutados desde ella.
+
+COMANDOS EXCLUIDOS DEL SEGUNDO HISTORIAL
+Se excluyen la clonación e instalación de Argus, la creación y activación
+del entorno virtual, el script de modificación de código y los comandos
+de navegación, ayuda, limpieza, salida y apagado: no ejecutan por sí
+mismos reconocimiento ni escaneo de infraestructura.

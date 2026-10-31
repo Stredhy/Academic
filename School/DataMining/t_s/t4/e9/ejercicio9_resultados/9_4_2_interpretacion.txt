@@ -1,0 +1,5 @@
+PCA conserva direcciones lineales de máxima varianza y permite identificar las variables que contribuyen a PC1 y PC2 mediante loadings.
+t-SNE busca mantener vecindades locales y puede separar visualmente grupos que se superponen en PCA, aunque la forma de sus islas depende de perplexity.
+Comparar las figuras para identificar dos variedades con distinto grado de solapamiento y cómo cambian al variar perplexity.
+Las distancias entre islas, sus tamaños y la separación global en t-SNE NO equivalen a distancias en PCA ni prueban clases naturalmente separadas.
+PC1 explica 55.47% y PC2 26.43% (total 81.90%).

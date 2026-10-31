@@ -1,0 +1,6 @@
+Arquitectura seleccionada por CV: [8]
+Regularización seleccionada por CV: L2
+Métricas testing: {'accuracy': 0.7142857142857143, 'precision': 0.5961538461538461, 'recall': 0.5740740740740741, 'F1': 0.5849056603773585, 'ROC_AUC': 0.8068518518518518}
+
+Sobreajuste: señalar una curva donde loss de training siga bajando mientras loss de validación aumente, si ocurre.
+Subajuste: señalar una curva donde ambos losses sean altos o las accuracies se mantengan bajas y próximas, si ocurre. No atribuirlos sin evidencia.

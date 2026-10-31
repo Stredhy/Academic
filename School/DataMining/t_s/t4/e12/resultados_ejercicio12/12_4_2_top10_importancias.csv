@@ -1,0 +1,24 @@
+﻿representacion,puesto,caracteristica,importancia
+Atributos propios (proxy grado),1,grado_proxy,1.0
+Adyacencia,1,vecino_id_4785,0.015379584198163695
+Adyacencia,2,vecino_id_524,0.010147992546148515
+Adyacencia,3,vecino_id_2510,0.009583102386391644
+Adyacencia,4,vecino_id_7237,0.008763997355473145
+Adyacencia,5,vecino_id_3530,0.008521700086233326
+Adyacencia,6,vecino_id_4811,0.008510845511115176
+Adyacencia,7,vecino_id_3450,0.007998765019060654
+Adyacencia,8,vecino_id_6101,0.005615311613511869
+Adyacencia,9,vecino_id_3597,0.00499550887607416
+Adyacencia,10,vecino_id_5274,0.0049200601316023605
+Cinco metricas topologicas,1,eigenvector,0.42045897877497895
+Cinco metricas topologicas,2,closeness_aprox,0.26291848116590183
+Cinco metricas topologicas,3,betweenness_aprox,0.13898143096924978
+Cinco metricas topologicas,4,degree,0.09439214247336151
+Cinco metricas topologicas,5,clustering_coefficient,0.08324896661650794
+Promedio de vecinos (grado),1,grado_medio_vecinos,1.0
+Propios + metricas,1,eigenvector,0.4161373566052023
+Propios + metricas,2,closeness_aprox,0.26190069148781675
+Propios + metricas,3,betweenness_aprox,0.13350038758925975
+Propios + metricas,4,clustering_coefficient,0.07664116666840595
+Propios + metricas,5,grado_proxy,0.056400129305602995
+Propios + metricas,6,degree,0.05542026834371226
