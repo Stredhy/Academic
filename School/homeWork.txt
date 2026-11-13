@@ -6,23 +6,22 @@ Prioridad [ ❗🔴❗ ]
 ______________________
 
 Seguridad de la Información e Infraestructura Tecnológica 
-[ ✅ ] - Resumen de Reconocimiento y Escaneo de la Infraestructura
+[ ❗ ] - Resumen de Evasión de Defensas y Seguridad en la Nube
+[ ❗ ] - Laboratorio Propuesto: "Ejecución y Análisis de un Pentest con Nessus"
+[ ❗ ] - Resumen de Seguridad en Redes Inalámbricas
 
 Algoritmos Metaheurísticos 
-[ ✅ ] - Algoritmo ACO
+[ ✅ ] - Algoritmo ED
 
 Métodos Numéricos
-[ ✅ ] - Tarea integración numérica
+[ ❗ ] - Tarea: Euler y Euler mejorado
 
 Minería de Datos
-[ ✅ ] - Tarea 6 - Git y DVC
-[ ✅ ] - Tarea 5 - Docker
-[ ✅ ] - Tarea 4 - Aprendizaje supervisado y no supervisado
-[ ❗🔴❗ ] - Proyecto - Introducción a MLOps: Desarrollo, Versionado y Automatización de Modelos de Machine Learning
+[ ⏳ ] - Proyecto - Introducción a MLOps: Desarrollo, Versionado y Automatización de Modelos de Machine Learning
 
 
 Internet de las Cosas
-[ ✅ ] - Practica 4
+[ ❗ ] - Practica 6
 
 Calidad de Software
-[ ✅ ] - P02 - SWTP & Test Results
+[  ] - 
