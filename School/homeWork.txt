@@ -6,7 +6,7 @@ Prioridad [ ❗🔴❗ ]
 ______________________
 
 Seguridad de la Información e Infraestructura Tecnológica 
-[ ❗ ] - Resumen de Evasión de Defensas y Seguridad en la Nube
+[ ✅ ] - Resumen de Evasión de Defensas y Seguridad en la Nube
 [ ❗ ] - Laboratorio Propuesto: "Ejecución y Análisis de un Pentest con Nessus"
 [ ❗ ] - Resumen de Seguridad en Redes Inalámbricas
 
@@ -14,14 +14,14 @@ Algoritmos Metaheurísticos
 [ ✅ ] - Algoritmo ED
 
 Métodos Numéricos
-[ ❗ ] - Tarea: Euler y Euler mejorado
+[ ⏳ ] - Tarea: Euler y Euler mejorado
 
 Minería de Datos
 [ ⏳ ] - Proyecto - Introducción a MLOps: Desarrollo, Versionado y Automatización de Modelos de Machine Learning
 
 
 Internet de las Cosas
-[ ❗ ] - Practica 6
+[ ✅ ] - Practica 7
 
 Calidad de Software
-[  ] - 
+[ ⏳ ] - Dashboard
