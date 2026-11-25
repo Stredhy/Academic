@@ -6,7 +6,3 @@ grupos - solo contienen usuarios no otros grupos
 
 IAM permisos
 los usuarios pueden asignar documentos JSON llamados políticas
-
-
-Practica 1:
-creando usuario IAM

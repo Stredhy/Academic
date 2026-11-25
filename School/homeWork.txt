@@ -1,26 +1,22 @@
-Finalizado [ ✅ ]
-En progreso [ ⏳ ]
-Pendiente [ ❗ ]
-No realizado [ ❌ ]
-Prioridad [ ❗🔴❗ ]   
-______________________
+Finalizado [ ✅ ]     |
+En progreso [ ⏳ ]    |
+Pendiente [ ❗ ]      |
+No realizado [ ❌ ]   |
+Prioridad [ ❗🔴❗ ] | 
+______________________|
 
 Seguridad de la Información e Infraestructura Tecnológica 
-[ ❗ ] - Resumen de Seguridad en Redes Inalámbricas
+[ ✅ ] - Instrucciones para la Elaboración de un Reporte de Ataque de Hacking en un Ambiente Controlado y Virtualizado
 [ ❗ ] - Instrucciones para la Elaboración de un Reporte de Ataque de Hacking en un Ambiente Controlado y Virtualizado
-
 
 Algoritmos Metaheurísticos 
 [  ] - 
 
 Métodos Numéricos
-[ ❗ ] - Tarea: Euler y Euler mejorado (reintento con y(1)=?)
-[ ❗ ] - Tarea: Runge-Kutta 4° orden
-[ ❗ ] - Tarea: Examen de practica
+[  ] - 
 
 Minería de Datos
-[ ✅ ] - Proyecto - Introducción a MLOps: Desarrollo, Versionado y Automatización de Modelos de Machine Learning
-
+[  ] - 
 
 Internet de las Cosas
 [  ] - 
